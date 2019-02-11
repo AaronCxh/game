@@ -1,0 +1,35 @@
+﻿@mixin border-1px($top, $right, $bottom, $left, $borderColor:#e5e5e5) {
+  &:after {
+    content: '';
+    position: absolute;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    top: $top;
+    height: 1px;
+    background-color: $borderColor;
+    display: block;
+    z-index: 15;
+    transform-origin: 50% 100%;
+    transform: scaleY(.5);
+  }
+}
+
+@mixin clamp($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin textOverflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin fontBold() {
+  font-weight: bold;
+  font-family: MicrosoftYaHei-Bold;
+}

@@ -1,0 +1,71 @@
+/* 滑动目标： swipeout-content，活动按钮:.swipeout-actions-left, .swipeout-actions-right*/
+.list{
+  ul{
+    position: relative;
+    @include border-1px(0, 0, -1px, auto);
+  }
+  li{
+    position: relative;
+  }
+  .item-content{
+    display: flex;
+    transition-duration: .3s;
+    transition-property: background-color;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+.swipeout{
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.swipeout-content{
+  position: relative;
+  z-index: 10;
+}
+.swipeout-actions-left, .swipeout-actions-right{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  direction: ltr;
+}
+.swipeout-actions-left{
+  left: 0;
+  transform: translateX(-100%);
+}
+.swipeout-actions-right{
+  right: 0;
+  transform: translateX(100%);
+}
+.swipeout-actions-left>a, 
+.swipeout-actions-left>button, 
+.swipeout-actions-left>div, 
+.swipeout-actions-left>span, 
+.swipeout-actions-right>a, 
+.swipeout-actions-right>button, 
+.swipeout-actions-right>div, 
+.swipeout-actions-right>span{
+    color: #fff;
+    background: #c7c7cc;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    padding: 0 24px;
+}
+.collect-button{
+  background-color: $bodycolor !important; 
+  color: #fff !important;
+}

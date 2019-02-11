@@ -1,0 +1,17 @@
+/* 没有数据样式 */
+.noData{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 0;
+  .iconfont{
+    font-size: 1.5rem;
+    color: #c71d47;
+    margin-bottom: 5px;
+  }
+  .text{
+    font-size: 0.75rem;
+    color: #999;
+    text-align: center;
+  }
+}

@@ -1,0 +1,266 @@
+/* 登录注册样式 */
+.login--form{
+  padding: 0 15px;
+  .submit-wrapper{
+    margin-top: 20px;
+    text-align: center;
+  }
+  .form-item{
+    margin-bottom: 0.5rem;
+  }
+  .button{
+    width: 100%;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    margin: 0 auto;
+  }
+  .tip-panel{
+    margin: 27px  0 14px;
+  }
+  .login-link{
+    display: flex;
+    margin-bottom: 15px;
+    .item{
+      flex: 1;
+      text-align: center;
+      font-size: 0;
+    }
+    .link{
+      display: inline-block;
+      font-size: 16px;
+      color: #757575;
+      padding: 20px 0 9px;
+      border-bottom: 2px solid transparent;
+      line-height: 1;
+    }
+    .item.active{
+      .link{
+        color: $bodycolor;
+        border-color: $bodycolor;
+      }
+    }
+  }
+  .imgcode{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .user-info{
+    display: block;
+    font-size: 14px;
+    padding: 15px 0 ;
+    color: #999;
+    line-height: 1;
+  }
+  .getcode{
+    position: absolute;
+    right: 0;
+    top:50%;
+    font-size: 12px;
+    color: #2EA5E5;
+    transform: translateY(-50%);
+  }
+  .form-control{
+    border:0;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    height: auto;
+    border-radius: 0;
+    &::-webkit-input-placeholder{
+      color: #999;
+    }
+    &::-moz-input-placeholder{
+      color: #999;
+    }
+    &::-ms-input-placeholder{
+      color: #999;
+    }
+  }
+  .forgetPsw{
+    color: #666666;
+    margin: 15px 0;
+    font-size: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      color: inherit;
+      font-size: 12px;
+      .iconfont{
+        font-size: 14px;
+      }
+    }
+  }
+  .button{
+    background: $bodycolor;
+    color: #fff;
+    padding: 15px 0;
+    &:active{
+      background: $bodycolor - 20;
+    }
+  }
+  .other-login{
+    margin-top: (106px/2);
+    .oth_type_tit{
+      border-top: 1px solid #e0e0e0;
+      padding-top: 10px;
+      padding-bottom: 10px\9;
+      font-size: 14px;
+      color: #b0b0b0;
+      margin: 0 auto;
+      text-align: center;
+      width: 100% \9;
+      .oth_type_txt{
+        font-size: 12px;
+        color: #b0b0b0;
+        margin: 0 auto;
+        text-align: center;
+        width: 100% \9;
+        padding: 0 10px;
+      }
+    }
+    .other-login-link{
+      text-align: center;
+      margin-top: (16px/2);
+      .login-link{
+        width: 30px;
+        height: 30px;
+        background-color: #62B900;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        color: #fff;
+        margin: 0px 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hidden{
+        display: none;
+      }
+    }
+  }
+  .pos--bottom{
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    left: 0;
+    padding: 0 0.75rem;
+  }
+  .message{
+    margin-top: 45px;
+    flex-direction: column !important;
+    margin: 1.5rem auto 0 !important;
+    max-width: 100% !important;
+    align-items: center !important;
+    .iconfont{
+      font-size: 64px;
+      display: block;
+      text-align: center;
+      line-height: 1.2;
+      &.success{
+        color: #26c076;
+      }
+      &.fail{
+        color: #D81E06;
+      }
+    }
+    .text{
+      font-size: 14px;
+      text-align: center;
+      margin: 10px 0 ;
+    }
+    .link{
+      background: $bodycolor;
+      font-size: 12px;
+      color: #fff;
+      padding: 10px;
+      display: block;
+      text-align: center;
+      margin: 0 56px;
+    }
+  }
+  .agreement-item{
+    display: block;
+    font-size: 0.65rem;
+    // margin: 20px 0 30px;
+    color: #666;
+    input{
+      float: left;
+      margin-top: 1px;
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+    }
+    a{
+      color: #000;
+    }
+  }
+  .register--button{
+    // padding: 0 50px;
+    margin: 30px 0 8px;
+    text-align: center;
+  }
+  .edit-inner{
+    padding: 15px 0;
+    .edit{
+      p,div{
+        font-size: 12px;
+        color: #999;
+      }
+    }
+    .back{
+      display: block;
+      background: $bodycolor;
+      padding: 10px; 
+      text-align: center;
+      font-size: 12px;
+      color: #fff;
+      margin: (118px/2) 70px 0 ;
+      
+    }
+  }
+
+  .tabs-nav{
+    display: flex;
+    margin-top: 15px;
+    a{
+      flex: 1;
+      font-size: 0.65rem;
+      padding: 5px 0;
+      text-align: center;
+      color: #666;
+      border: 1px solid transparent;
+      &.active{
+        border-color: $bodycolor;
+        color: $bodycolor !important;
+      }
+    }
+  }
+
+  .tabs-content{
+    .inner{
+      margin-top: 20px;
+    }
+  }
+
+  
+ 
+}
+
+
+
+.solt-login{
+  font-size: 0.7rem;
+  color: #666666;
+  text-align: center;
+  margin-top: 1rem;
+  a{
+    color: #666;
+    font-weight: 700;
+  }
+}

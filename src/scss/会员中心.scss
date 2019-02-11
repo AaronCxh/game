@@ -1,0 +1,139 @@
+/* 会员中心样式 */
+.user-content{
+  height: (325px)/2;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 100%;
+  padding: 50px 0 0 17px;
+  background-color: #fff;
+  .user-wrapper{
+    display: flex;
+    align-items: center;
+    .avatar{
+      width: (128px/2);
+      height: (128px/2);
+      flex:0 0 64px;
+      margin-right: 12px;
+    }
+    .con{
+      flex: 1;
+      overflow: hidden;
+      .name{
+        font-size: 16px;
+        margin-bottom: 8px;
+        line-height: 1;
+      }
+      .edit{
+        color: $bodycolor;
+        font-size: 10px;
+        display: block;
+      }
+    }
+    .login-solt{
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      .iconfont{
+        position: relative;
+        top: 1px;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+    }
+  }
+}
+section.block-section{
+  background: #fff;
+  .block{
+    display: flex;
+    .item{
+      display: flex;
+      flex:1;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 18px 0;
+      .iconfont{
+        font-size: 1.35rem;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        margin-bottom: 10px;
+      }
+      .text{
+        font-size: 0.65rem;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.message-control{
+  font-size: 0.65rem;
+  background: #fff;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .delALL, .readALL{
+    display: inline-block;
+    padding: 5px 10px;
+    background: #fff;
+    color: $bodycolor;
+    border-radius: 4px;
+  }
+  .readALL{
+    margin-left: auto;
+    margin-right: 0.8rem;
+  }
+  .selectALL{
+    display: flex;
+    align-items: center;
+    margin-left: -0.1rem;
+    input{
+      display: none;
+    }
+    input:checked + span{
+      background-color: $bodycolor;
+      &:after{
+        // content:'';
+        // display: inline-block;
+        // position: absolute;
+        // width: 10px;
+        // height: 10px;
+        // background: $bodycolor;
+        // left: 50%;
+        // top: 50%;
+        // margin: -5px 0 0 -5px;
+        // border-radius: 50%;
+        background: no-repeat center;
+        background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20x%3D'0px'%20y%3D'0px'%20viewBox%3D'0%200%2012%209'%20xml%3Aspace%3D'preserve'><polygon%20fill%3D'%23ffffff'%20points%3D'12%2C0.7%2011.3%2C0%203.9%2C7.4%200.7%2C4.2%200%2C4.9%203.9%2C8.8%203.9%2C8.8%203.9%2C8.8%20'%2F><%2Fsvg>");
+        background-size: 12px 9px;
+      }
+    }
+    span{
+      position: relative;
+      display: inline-block;
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 1px solid $bodycolor;
+      // border-radius: 50%;
+      &:after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -6px;
+        margin-top: -4px;
+        width: 12px;
+        height: 9px;
+      }
+    }
+    i{
+      color: #333;
+      margin-left: 5px;
+    }
+  }
+}
+
+
+

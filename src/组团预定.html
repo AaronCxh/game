@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>group-bookings</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,400i,500,500i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    body {
+      background-image: url('./images/bookWizardBackground.jpg');
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <section class="group-booking-intro">
+    <a class="close" id="CloseBookingWizard" href="./index.html"><span>Close</span></a>
+
+
+    <span class="subtitle">Reward &amp; Develop Your Team</span>
+    <h1>Corporate Events</h1>
+
+    <p>The best team building and leadership development activities in Melbourne and Brisbane. If you’re looking to
+      reward or develop your team with an awesome experience, we can help you organise the ultimate event!</p>
+
+    <div class="booking-group-hero-container">
+      <img src="./images/groupBooking.jpg">
+    </div>
+
+    <div class="event-types">
+      <article>
+        <h2><span>Corporate Events</span></h2>
+        <p>There’s nothing like a truly engaging, immersive and unique experience to bring a team together. Get your
+          team out of their day-to-day environment and challenge them with an event they’ll talk about all year!
+          Perfect for team building, leadership development, corporate entertainment and EOFY and Christmas parties.</p>
+        <p>&nbsp;</p>
+        <p>Our venue managers will take the stress out of organising an event and assist you through the process to
+          make sure your session is a complete success. We cater for 6 to 90 people and tailor the in-game experience
+          to suit your needs and budget.</p>
+        <p>&nbsp;</p>
+        <p>Corporate Events are available Monday to Friday during normal business hours. To enquire about a booking
+          during normal business hours, please submit the form below. For bookings outside these hours, please visit
+          our <a data-udi="umb://document/53cc0dc9b23b4854a9c65ed209e00d8a" href="/booking-location/" title="Booking Location">Bookings
+            Page</a>.</p>
+        <h2><span>School/University Groups</span></h2>
+        <p>If you have students ready to try out the most engaging, immersive VR experiences on the planet then we can
+          help you. Combine your students’ skills and interests for this unique group experience. We can hold school
+          and uni bookings during the day at a time that best suits you and help cater an in-game length that will work
+          best for your group. Our experiences are for ages 13 plus.</p>
+        <p>&nbsp;</p>
+        <p>School/University Groups are available Monday to Friday during normal business hours.&nbsp;To enquire about
+          a booking during normal business hours, please submit the form below. For bookings outside these hours,
+          please visit our <a data-udi="umb://document/53cc0dc9b23b4854a9c65ed209e00d8a" href="/booking-location/"
+            title="Booking Location">Bookings Page</a>.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="disclaimer">
+    <p>For all bookings outside normal business hours, please visit our <a data-udi="umb://document/53cc0dc9b23b4854a9c65ed209e00d8a"
+        href="/booking-location/" title="Booking Location">Bookings</a> and <a data-udi="umb://document/f316801b30f544969e49cb477b5be7a3"
+        href="/faq/" title="FAQ">Frequently Asked Questions</a> pages.</p>
+  </div>
+
+  <form method="post" id="GroupEnquiryForm" action="/group-enquiry">
+    <section class="enquiry hero-section">
+      <h2>Enquire Now</h2>
+      <div class="half-column">
+        <label for="Venues">Venue</label>
+        <select id="Venues" name="SiteId" data-clean="true">
+          <option value="">- Select venue -</option>
+          <option value="40">Brisbane</option>
+          <option value="11">Melbourne</option>
+        </select>
+        <div class="error-message" data-for="Venues" data-type="required" style="display: none;">Please select a venue</div>
+      </div>
+
+      <div class="half-column">
+        <label for="Players">Number of Players</label>
+        <input type="number" id="Players" name="Players" data-min-value="1" data-max-value="100" maxlength="3"
+          data-clean="true">
+        <div class="error-message" data-for="Players" data-type="numeric" style="display: none;">Invalid number of
+          players</div>
+        <div class="error-message" data-for="Players" data-type="required" style="display: none;">Please select a
+          number of players</div>
+      </div>
+
+      <div class="half-column">
+        <label for="EventType">Event Type</label>
+        <select id="EventType" name="EventType" data-clean="true">
+          <option value="">- Select your event type -</option>
+          <option>Corporate booking / team building</option>
+          <option>School / University Group</option>
+        </select>
+        <div class="error-message" data-for="EventType" data-type="required" style="display: none;">Please provide your
+          event type</div>
+      </div>
+
+      <div class="half-column">
+        <label for="Date">Preferred Date</label>
+        <div class="date-picker"><input type="text" id="Date" name="Date" class="date-picker-value" style="display: none;"
+            data-clean="true"><input type="text" class="display-value" value="">
+          <div class="calendar-popup">
+            <div class="date-selection">
+              <header><a class="prev" title="Previous month"><span>Prev</span></a><span class="month-year">January 2019</span><a
+                  class="next" title="Next month"><span>Next</span></a></header>
+              <div class="calendar-body">
+                <table class="date-picker-table">
+                  <thead>
+                    <tr>
+                      <th>Su</th>
+                      <th>Mo</th>
+                      <th>Tu</th>
+                      <th>We</th>
+                      <th>Th</th>
+                      <th>Fr</th>
+                      <th>Sa</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="different-month past" data-date="20181230">30</td>
+                      <td class="different-month past" data-date="20181231">31</td>
+                      <td class="past" data-date="20190101">1</td>
+                      <td class="past" data-date="20190102">2</td>
+                      <td class="past" data-date="20190103">3</td>
+                      <td class="past" data-date="20190104">4</td>
+                      <td class="past" data-date="20190105">5</td>
+                    </tr>
+                    <tr>
+                      <td class="past" data-date="20190106">6</td>
+                      <td class="past" data-date="20190107">7</td>
+                      <td class="past" data-date="20190108">8</td>
+                      <td class="past" data-date="20190109">9</td>
+                      <td class="past" data-date="20190110">10</td>
+                      <td class="past" data-date="20190111">11</td>
+                      <td class="past" data-date="20190112">12</td>
+                    </tr>
+                    <tr>
+                      <td class="past" data-date="20190113">13</td>
+                      <td class="past" data-date="20190114">14</td>
+                      <td class="past" data-date="20190115">15</td>
+                      <td class="past" data-date="20190116">16</td>
+                      <td class="past" data-date="20190117">17</td>
+                      <td class="past" data-date="20190118">18</td>
+                      <td class="past" data-date="20190119">19</td>
+                    </tr>
+                    <tr>
+                      <td class="past" data-date="20190120">20</td>
+                      <td class="current today" data-date="20190121">21</td>
+                      <td class="future" data-date="20190122">22</td>
+                      <td class="future" data-date="20190123">23</td>
+                      <td class="future" data-date="20190124">24</td>
+                      <td class="future" data-date="20190125">25</td>
+                      <td class="future" data-date="20190126">26</td>
+                    </tr>
+                    <tr>
+                      <td class="future" data-date="20190127">27</td>
+                      <td class="future" data-date="20190128">28</td>
+                      <td class="future" data-date="20190129">29</td>
+                      <td class="future" data-date="20190130">30</td>
+                      <td class="future" data-date="20190131">31</td>
+                      <td class="different-month future" data-date="20190201">1</td>
+                      <td class="different-month future" data-date="20190202">2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="month-selection">
+              <header><a class="prev-year" title="Previous year"><span>Prev</span></a><span class="year">2019</span><a
+                  class="next-year" title="Next year"><span>Next</span></a></header>
+              <div class="months">
+                <div class="month-cell" data-month="0">Jan</div>
+                <div class="month-cell" data-month="1">Feb</div>
+                <div class="month-cell" data-month="2">Mar</div>
+                <div class="month-cell" data-month="3">Apr</div>
+                <div class="month-cell" data-month="4">May</div>
+                <div class="month-cell" data-month="5">Jun</div>
+                <div class="month-cell" data-month="6">Jul</div>
+                <div class="month-cell" data-month="7">Aug</div>
+                <div class="month-cell" data-month="8">Sep</div>
+                <div class="month-cell" data-month="9">Oct</div>
+                <div class="month-cell" data-month="10">Nov</div>
+                <div class="month-cell" data-month="11">Dec</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="error-message" data-for="Date" data-type="required" style="display: none;">Please select preferred
+          date</div>
+      </div>
+
+      <div class="half-column">
+        <label for="Time">Preferred Time</label>
+        <input type="text" id="Time" name="Time" maxlength="10">
+      </div>
+
+      <div class="half-column">
+        <label for="Name">Name</label>
+        <input type="text" id="Name" name="Name" maxlength="30" data-clean="true">
+        <div class="error-message" data-for="Name" data-type="required" style="display: none;">Please provide your name</div>
+      </div>
+
+      <div class="half-column">
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" maxlength="200" data-clean="true">
+        <div class="error-message" data-for="Email" data-type="required" style="display: none;">Please provide your
+          email address</div>
+        <div class="error-message" data-for="Email" data-type="email" style="display: none;">Invalid email address</div>
+      </div>
+
+      <div class="half-column">
+        <label for="Phone">Phone</label>
+        <input type="text" id="Phone" name="Phone" maxlength="20" data-clean="true">
+        <div class="error-message" data-for="Phone" data-type="required" style="display: none;">Please provide your
+          phone number</div>
+      </div>
+
+      <div>
+        <label for="Message">Your Message</label>
+        <textarea id="Message" name="Message"></textarea>
+      </div>
+      <div class="g-recaptcha" data-sitekey="6Lfq92QUAAAAAJHpu3Xe-IP6pfPjlKPTGvJXKmKJ" data-callback="submitEnquiry"
+        data-size="invisible" data-theme="dark" data-badge="inline">
+      </div>
+      <a class="button submit" id="Submit">Submit</a>
+    </section>
+  </form>
+
+
+
+
+  <script>
+    var navLinkCount = 8;
+  </script>
+  <script src="./js/jquery-1.11.0.js"></script>
+  <script src="./js/swiper.min.js"></script>
+  <script src="./js/main.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+/* 重置radio样式 */
+.radio-input{
+  display: inline-flex;
+  align-items: center;
+  margin-right: 11px;
+  height: 2.15rem;
+  padding: 0 0.25rem;
+  span{
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #7E7E7E;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+  input{
+    display: none;
+  }  
+  input:checked + span{
+    border-color: #333;
+    &:after{
+      position: absolute;
+      content:'';
+      width: 6px;
+      height: 6px;
+      left: 50%;
+      top: 50%;
+      margin-left: -3px;
+      margin-top: -3px;
+      background: #333;
+      border-radius: 50%;
+    }
+
+  }
+}
+.c_radio{
+  font-size: 0;
+  input{
+    display: none;
+  }
+  input:checked + span{
+    background: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20x%3D'0px'%20y%3D'0px'%20viewBox%3D'0%200%2012%209'%20xml%3Aspace%3D'preserve'><polygon%20fill%3D'%23ffffff'%20points%3D'12%2C0.7%2011.3%2C0%203.9%2C7.4%200.7%2C4.2%200%2C4.9%203.9%2C8.8%203.9%2C8.8%203.9%2C8.8%20'%2F><%2Fsvg>") no-repeat center center;
+    border-color: $bodycolor;
+    background-size: 100% 100%;
+    background-color: $bodycolor;
+  }
+  span{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+  }
+}
+
+.custom-checkbox{
+  font-size: 0;
+  input[type='checkbox']{
+    display: none;
+  }
+  input[type='checkbox'] + i{
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 1px solid $bodycolor;
+  }
+  .icon-checkbox{
+    position: relative;
+    display: block;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -6px;
+      margin-top: -4px;
+      width: 12px;
+      height: 9px;
+    }
+  }
+  input[type="checkbox"]:checked + .icon-checkbox{
+    background-color: $bodycolor;
+    &:after{
+      background: no-repeat center;
+      background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20x%3D'0px'%20y%3D'0px'%20viewBox%3D'0%200%2012%209'%20xml%3Aspace%3D'preserve'><polygon%20fill%3D'%23ffffff'%20points%3D'12%2C0.7%2011.3%2C0%203.9%2C7.4%200.7%2C4.2%200%2C4.9%203.9%2C8.8%203.9%2C8.8%203.9%2C8.8%20'%2F><%2Fsvg>");
+      background-size: 12px 9px;
+    }
+
+  }
+}

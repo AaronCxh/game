@@ -1,0 +1,133 @@
+/* 属性下拉 */
+.prodProp{
+  position: fixed;
+  bottom: -100%;
+  width: 0;
+  background: #ffff;
+  z-index: 99999;
+  width: 100%;
+  transition: all 0.3s;
+  // max-height: 320px;
+  z-index:2222;
+  .header{
+    position: relative;
+    padding: 13px 0 30px 105px;
+    @include border-1px(0, 0, auto, 0);
+    background: #fff;
+      .price{
+        font-size: 16px;
+        color: #C71D47;
+      }
+      .prodImage{
+        position: absolute;
+        left: 15px;
+        top: -40px;
+        width: 80px;
+        font-size: 0;
+        border: 1px solid #ddd;
+        img{
+          width: 100%;
+        }
+      }
+  }
+  .body{
+    overflow-y: auto;
+    background: #fff;
+    padding: 20px 15px 140px;
+    .name-label{
+      font-size: 14px;
+      color: #000;
+    }
+    .name-con{
+      font-size: 14px;
+      color: #000;
+    }
+    .item{
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .s-item{
+      margin-bottom: 20px;
+    }
+    .prop{
+      display: inline-block;
+      margin-right: 5px;
+      padding: 5px;
+      &.on{
+        background: $bodycolor;
+        color: #fff;
+      }
+    }
+    .label{
+      font-size: 12px;
+    }
+    .con{
+      font-size: 12px;
+    }
+  }
+  .footer{
+    background: #fff;
+    .save-button{
+      width: 100%;
+      padding: 15px 0;
+      font-size: 12px;
+      border-radius: 0;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+body.open .prodProp{
+  bottom: 0;
+}
+.js-close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #999;
+}
+
+
+.panel{
+  // padding: 20px 0 0;
+  .button-group{
+    display: flex;
+    .button{
+      flex: 1;
+      padding: 10px 0;
+      background: $bodycolor;
+      border-radius: 0;
+      color:#fff;
+      height: 43px;
+    }
+    .reset{
+      background: #003962;
+    }
+  }
+}
+
+.select-box{
+  display: flex;
+  li{
+    flex:  0 0 (100%/3);
+    .form-control{
+      height: 30px;
+      color: #757575;
+    }
+  }
+}
+
+.voucher-item{
+  margin-bottom: 1rem;
+  label{
+    text-align: center;
+    font-size: 0.75rem;
+    color: red;
+  }
+  input[type="file"]{
+    display: none;
+  }
+}

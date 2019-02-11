@@ -1,0 +1,500 @@
+﻿.plain p, .plain li {
+  font-size: 18px;
+}
+
+section {
+  padding: 0 25px;
+  position: relative;
+  padding: 100px 0;
+}
+
+.plain h1 {
+  text-align: center;
+}
+
+img.fill {
+  display: block;
+  width: 100%;
+}
+
+.plain h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.subtitle + h2 {
+  margin-top: 0;
+}
+
+.plain h3 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.plain img + h2,
+.plain img + h3,
+.plain p + h2,
+.plain p + h3 {
+  margin-top: 40px;
+}
+
+.plain p {
+  margin: 10px auto;
+}
+
+/* Button container */
+.plain .button-container {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 0 -10px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.plain .button-container.center {
+  justify-content: center;
+}
+
+.plain .button-container .button {
+  display: block;
+  flex-shrink: 1;
+  margin: 10px;
+  min-width: 150px;
+}
+
+
+.plain ul {
+  margin: 10px 0;
+  margin-left: 30px;
+}
+
+.plain ul li {
+  margin: 10px 0;
+}
+
+/* Commerial Stuff */
+html {
+  background-color: #f3f3f3;
+}
+
+body {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+.max-center {
+  max-width: 1000px;
+  margin: auto;
+}
+
+img + .max-center,
+.max-center + .max-center {
+  margin-top: 100px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  color: #000;
+}
+
+.button.ghost {
+  color: #000;
+}
+
+.show-nav .base-header {
+  background: none;
+}
+
+input.field-error, textarea.field-error, select.field-error {
+  border-color: rgba(255,0,0,0.4);
+}
+
+input, textarea, select {
+  background-color: #ddd;
+  color: #333;
+}
+
+.base-footer .social-links {
+  background-color: #38bcee;
+  padding: 15px 10px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+label {
+  font-weight: 500;
+  color: #000;
+}
+
+.show-nav .account-link > span {
+  color: #fff;
+}
+
+.enquiry-form {
+  padding: 0;
+}
+
+section.intro {
+  background-color: #111e23;
+  background-image: url(../images/commercialBackground.jpg);
+  background-position: center 25%;
+  background-size: cover;
+  max-width: unset;
+  margin: 0;
+  padding: 200px 30px 60px 0;
+  text-align: center;
+  color: #41bdec;
+}
+
+section.intro .button.ghost {
+  color: #fff;
+}
+
+section.intro h1 {
+  color: #fff;
+}
+
+section.intro:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(51,72,86,0) 15%, rgba(51,72,86,1) 100%);
+}
+
+.stat-counts {
+  display: flex;
+  justify-content: center;
+}
+
+.stat-counts > div {
+  border: 2px solid #38bcee;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin: 0 20px;
+  margin-top: 40px;
+}
+
+.stat-counts > div strong {
+  font-size: 40px;
+  display: block;
+  margin-top: 25px;
+}
+
+.stat-counts > div span {
+  font-size: 14px;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* Half image block */
+.half-img-block {
+  position: relative;
+  max-width: unset;
+  margin: 0;
+  padding: 0;
+  min-height: 35vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.half-img-block > div {
+  flex-grow: 1;
+  width: 50%;
+}
+
+.half-img-block .image {
+  background: #111e23;
+  background-repeat: no-repeat;
+  background-position: center 5%;
+  background-size: cover;
+}
+
+.half-img-block .content-container {
+  padding: 100px;
+  align-self: center;
+}
+
+.half-img-block .content-container > div {
+  max-width: 600px;
+  margin: auto;
+}
+
+.half-img-block.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Icon points section */
+.icon-points-section {
+  margin: 0;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.icon-points-section ul {
+  display: block;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+}
+
+.icon-points-section ul li {
+  width: 25%;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0 10px;
+}
+
+.icon-points-section ul li i {
+  display: block;
+  height: 140px;
+  max-width: 140px;
+  margin: auto;
+  margin-bottom: 10px;
+  background-image: url('../images/billing.png');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-points-section ul li span {
+  display: block;
+  color: #38bcee;
+  font-size: 14px;
+}
+
+.icon-points-section ul li strong {
+  font-size: 18px;
+  color: #000000;
+}
+
+/* Quote */
+.quote {
+  background-image: url('../images/townImagery.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px;
+}
+
+.pdp {
+  background-position-y: -50px;
+  background-image: url('../images/bluediepie.jpg');
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  padding: 200px 20px;
+}
+
+.quote:before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/quoteIcon.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.quote blockquote {
+  text-transform: none;
+  font-size: 22px;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.quote blockquote p {
+  text-transform: none;
+}
+
+.quote blockquote cite {
+}
+
+.quote blockquote cite i {
+  width: 150px;
+}
+
+.enquiry-form {
+  border: none;
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+/* Big points */
+.big-points article {
+  padding-left: 150px;
+  position: relative;
+  min-height: 120px;
+  margin-bottom: 40px;
+}
+
+.big-points article:last-child {
+  margin-bottom: 0;
+}
+
+.big-points article i {
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 130px;
+  height: 130px;
+  background-image: url('../images.billing.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Awards */
+.awards article {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  padding-left: 100px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.awards article h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+}
+
+.awards article:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.awards article ul li {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  display: block;
+  list-style-type: none;
+  background-image: url('../images/awardBullet.png');
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+}
+
+.plain ul.tick-list {
+  margin: 0;
+}
+
+.plain .tick-list li {
+  margin: 0;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  background-image: url('../images/tickBullet.png');
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: 0 3px;
+}
+
+.thank-you {
+  padding-top: 200px;
+}
+
+@media (max-width: 980px) {
+  .stat-counts > div {
+      margin: 0 10px;
+  }
+
+ 
+
+  .half-img-block {
+      flex-wrap: wrap;
+  }
+
+  .half-img-block .image {
+      height: 50vh;
+  }
+
+  .half-img-block > div {
+      width: 100%;
+  }
+
+  .half-img-block .content-container, .content-container {
+      padding: 50px;
+  }
+
+  .icon-points-section ul {
+      flex-wrap: wrap;
+  }
+
+  .icon-points-section ul li {
+      width: 50%;
+  }
+
+  .enquiry-form {
+      padding: 0 50px;
+      width: 100%;
+  }
+
+  .big-points article i {
+      position: unset;
+      margin: 0 auto;
+  }
+
+  .big-points article {
+      padding-left: unset;
+      padding-bottom: 20px;
+      margin: 0 auto;
+      width: 70%;
+  }
+
+  .awards article {
+      padding-left: 20px;
+  }
+
+  .awards article h3 {
+      position: unset;
+  }
+
+
+  .plain .button-container .button {
+      margin: 10px auto;
+  }
+
+  .pdp {
+      background-position-y: 0;
+      background-attachment: scroll;
+      background-image: url(../images/bluediepie.jpg);
+  }
+}
+
+@media (max-width: 450px) {
+  .stat-counts > div {
+      margin: 0 1px;
+      width: 120px;
+      height: 105px;
+  }
+
+  .stat-counts > div > span {
+      font-size: 12px;
+  }
+
+  .stat-counts > div strong {
+      font-size: 30px;
+      margin-top: 22px;
+  }
+
+
+}

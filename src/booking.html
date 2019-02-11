@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>booking</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,400i,500,500i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/DatePicker.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    body{
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    html, body {
+      min-height: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body style="background-image: url(./images/bookWizardBackground.jpg);">
+  <a class="close" id="CloseBookingWizard" href="/"><span>Close</span></a>
+  <section id="ChooseLocation" class="wizard-section choose-location-secton hero-section" data-step="">
+    <header>
+      <strong>Make a booking</strong>
+      <h2>Choose Location</h2>
+    </header>
+
+    <div>
+      <div class="columns">
+        <div class="column">
+          <label for="Country">Country</label>
+          <select id="Country">
+            <option value="">- Please select -</option>
+            <option value="Australia">Australia</option>
+          </select>
+        </div>
+        <div class="column">
+          <label for="Venues">Venue</label>
+          <select id="Venues" disabled=""></select>
+        </div>
+      </div>
+
+      <div id="VenueDetails" class="button-container hidden">
+        <a href="/" target="_blank" class="location-address" id="LocationVenueAddress">Site address</a>
+        <div class="venue-map-container" id="VenueMap">
+          <div class="map">
+            <iframe id="GoogleMap" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+          </div>
+        </div>
+        <a id="SelectSiteNext" class="button ghost">Next</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ChooseSession" class="wizard-section choose-session-section current-section hero-section" data-step="">
+    <header>
+      <strong>Make a Booking</strong>
+      <h2>Choose A Session</h2>
+    </header>
+
+    <div>
+      <a class="calendar-button" id="SessionCalendarButton"><span>Calendar</span></a>
+      <input type="hidden" id="SessionCalendarDate" />
+
+      <div class="date-week-nav" id="DateWeekNav">
+        <a class="prev-week disabled"><span>Previous</span></a>
+        <a class="next-week"><span>Next</span></a>
+      </div>
+
+      <input type="hidden" id="SessionDateWheel" value="20190120">
+
+
+      <div class="loader-container hidden" id="SessionLoader">
+        <div class="loader">
+          <span>Loading</span>
+        </div>
+      </div>
+
+      <input type="hidden" id="PackageId" value="">
+      <input type="hidden" id="Players" value="1">
+      <input type="hidden" id="Time">
+
+
+      <!-- 当前日期没有活动去除hidden -->
+      <div id="NoSessionsAvailable" class="no-sessions-message hidden">
+        There are no sessions running on this date.
+      </div>
+
+      <!-- 活动列表 -->
+      <div id="IntegratedPackageSessionSection" class="integrated-package-session-selection">
+
+        <!-- <div class="package collapsed limited" data-packageid="627">
+          <div class="package-details">
+            <div class="hero" style="background-image: url(&quot;https://zerolatencyvr.blob.core.windows.net/packages/627-1.jpg&quot;);"><a
+                class="play-video"><span>Play</span></a></div>
+            <div class="details">
+              <h3>Zombie Survival</h3><span class="package-info">1-6 Players, 20 min</span>
+              <p></p>
+              <p>Your team is trapped in a fort, amidst a zombie outbreak. A rescue team is on its way but you must
+                hold the fort.</p>
+              <p></p>
+              <div class="package-availability"><span class="availability">Limited</span></div>
+              <div class="price"><span class="from">from </span><strong>¥2,000</strong><span class="per-person">Per
+                  Person</span></div><a class="button ghost sessions-toggle">Sessions</a>
+            </div>
+          </div>
+          <div class="sessions" style="display: none;">
+
+            <div data-gamespaceid="11" data-time="201902101230" data-price="2000"><span class="time">12:30 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101300" data-price="2000"><span class="time">1:00 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101330" data-price="2000" class="sold"><span class="time">1:30
+                PM</span>
+              <ul>
+                <li class="sold"><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101400" data-price="2000"><span class="time">2:00 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class=""><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101430" data-price="2000" class="sold"><span class="time">2:30
+                PM</span>
+              <ul>
+                <li class="sold"><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101500" data-price="2000"><span class="time">3:00 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class=""><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101530" data-price="2000"><span class="time">3:30 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class=""><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101600" data-price="2000" class="sold"><span class="time">4:00
+                PM</span>
+              <ul>
+                <li class="sold"><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101630" data-price="2000"><span class="time">4:30 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class=""><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101700" data-price="2000"><span class="time">5:00 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101730" data-price="2000"><span class="time">5:30 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class=""><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101800" data-price="2000"><span class="time">6:00 PM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class=""><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101830" data-price="2000"><span class="time">6:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101900" data-price="2000"><span class="time">7:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902101930" data-price="2000"><span class="time">7:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902102000" data-price="2000"><span class="time">8:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902102030" data-price="2000"><span class="time">8:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902102100" data-price="2000"><span class="time">9:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="package collapsed available" data-packageid="631">
+          <div class="package-details">
+            <div class="hero" style="background-image: url(&quot;https://zerolatencyvr.blob.core.windows.net/packages/631-1.jpg&quot;);"><a
+                class="play-video"><span>Play</span></a></div>
+            <div class="details">
+              <h3>Zombie Survival</h3><span class="package-info">1-6 Players, 20 min</span>
+              <p></p>
+              <p>Your team is trapped in a fort, amidst a zombie outbreak. A rescue team is on its way but you must
+                hold the fort.</p>
+              <p></p>
+              <div class="package-availability"><span class="availability">Available</span></div>
+              <div class="price"><span class="from">from </span><strong>¥2,000</strong><span class="per-person">Per
+                  Person</span></div><a class="button ghost sessions-toggle">Sessions</a>
+            </div>
+          </div>
+          <div class="sessions" style="display: none;"">
+            <div data-gamespaceid="11" data-time="201902111030" data-price="2000" class="active"><span class="time">10:30
+                AM</span>
+              <ul>
+                <li class="active"><span>1</span></li>
+                <li class="active"><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111100" data-price="2000"><span class="time">11:00 AM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class=""><span>2</span></li>
+                <li class=""><span>3</span></li>
+                <li class=""><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111130" data-price="2000"><span class="time">11:30 AM</span>
+              <ul>
+                <li class=""><span>1</span></li>
+                <li class=""><span>2</span></li>
+                <li class=""><span>3</span></li>
+                <li class=""><span>4</span></li>
+                <li class=""><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111200" data-price="2000"><span class="time">12:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111230" data-price="2000"><span class="time">12:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111300" data-price="2000"><span class="time">1:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111330" data-price="2000" class="sold"><span class="time">1:30
+                PM</span>
+              <ul>
+                <li class="sold"><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111400" data-price="2000"><span class="time">2:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111430" data-price="2000" class="sold"><span class="time">2:30
+                PM</span>
+              <ul>
+                <li class="sold"><span>1</span></li>
+                <li class="sold"><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111500" data-price="2000"><span class="time">3:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111530" data-price="2000"><span class="time">3:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111600" data-price="2000"><span class="time">4:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111630" data-price="2000"><span class="time">4:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111700" data-price="2000"><span class="time">5:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li class="sold"><span>3</span></li>
+                <li class="sold"><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111730" data-price="2000"><span class="time">5:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li class="sold"><span>5</span></li>
+                <li class="sold"><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111800" data-price="2000"><span class="time">6:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111830" data-price="2000"><span class="time">6:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111900" data-price="2000"><span class="time">7:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902111930" data-price="2000"><span class="time">7:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902112000" data-price="2000"><span class="time">8:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902112030" data-price="2000"><span class="time">8:30 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+            <div data-gamespaceid="11" data-time="201902112100" data-price="2000"><span class="time">9:00 PM</span>
+              <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+              </ul><span class="price">¥2,000</span>
+            </div>
+          </div>
+        </div> -->
+
+
+
+
+      </div>
+      <!-- 活动列表 -->
+
+    </div>
+
+    <div class="wizard-footer session-footer">
+      <div class="footer-details" id="SessionFooterSummary">
+        <div class="location">
+          <span>Location</span>
+          <strong>Tokyo </strong>
+        </div>
+
+        <div class="package">
+          <span>Booking</span>
+          <strong>-</strong>
+        </div>
+
+        <div class="booking">
+          <span>Session</span>
+          <strong>-</strong>
+        </div>
+
+        <div class="total">
+          <span>Total</span>
+          <strong id="SessionCostTotal">-</strong>
+        </div>
+        <a class="button ghost disabled" id="CheckoutButton">Checkout</a>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="full-loader" id="FullLoader">
+    <div>
+      <span class="loader-symbol"></span>
+      <p>Loading</p>
+    </div>
+  </div>
+
+  <!-- 分享按钮 -->
+  <div class="session-share-button-container">
+    <a class="share" id="SessionShareButton" title="Share"><span>Share Session Link</span></a>
+  </div>
+  <!-- 分享按钮 -->
+
+  <!-- 分享内容 -->
+  <div id="ShareBookingDialogue" class="session-share-container">
+    <div class="shade"></div>
+    <div class="share-dialogue">
+      <input type="text" id="ShareUrl" value="https://zerolatencyvr.com/melbourne/book-now?s=20190211" readonly="">
+      <a class="button ghost copy-button" id="SessionShareCopy"><span>Copy</span></a>
+    </div>
+  </div>
+  <!-- 分享内容 -->
+
+  <script>
+    var sessionTimeCode = null;
+  </script>
+  <script src="./js/jquery-1.11.0.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/DateManager.js"></script>
+  <script src="./js/DateWheelSwipe.js"></script>
+  <script src="./js/DatePicker.js"></script>
+  
+  <script>
+    var WizardData = {};
+
+    WizardData.Packages = [];
+    WizardData.SkipLogin = false;
+    WizardData.LastValidatedEmail = '';
+    WizardData.SiteCurrencies = [];
+    WizardData.Sites = [];
+    WizardData.SiteCurrencies['12'] = '3';
+    WizardData.Sites['12'] = {
+      Currency: '3',
+      HasPhone: false,
+      RequiresPhone: false,
+      HasTerms: true,
+      PaymentGateway: 'PayPal'
+    };
+
+    DateManager.FullMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+      'October', 'November', 'December'
+    ];
+    DateManager.ShortMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    DateManager.ShortWeekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    DateManager.VeryShortWeekdays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+
+
+    clientBaseNav = {
+      siteId: 12
+    };
+
+    WizardData.config = {
+      language: 'English',
+      languageId: 1,
+      isLoggedIn: false,
+      countryVenues: [{
+        "Name": "Brisbane",
+        "SiteId": 40,
+        "Country": "Australia",
+        "Address": "34 Chester Street, Newstead, QLD 4006",
+        "GoogleMap": "",
+        "GoogleMapLink": ""
+      }, {
+        "Name": "Melbourne",
+        "SiteId": 11,
+        "Country": "Australia",
+        "Address": "22-32 Steel Street, North Melbourne, VIC 3051",
+        "GoogleMap": "",
+        "GoogleMapLink": ""
+      }],
+      dateAvailabilityUrl: '/booking/date-availability',
+      packageAvailabilityUrl: '/booking/package-availability',
+      getPackagesUrl: '/booking/packages',
+      siteConfigUrl: '/booking/site-config',
+      processBookingUrl: '/booking/process',
+      checkEmailUrl: '/booking/check-email',
+      forgotPasswordUrl: '/forgot-password',
+      reserveBookingUrl: '/booking/reserve',
+      loginUrl: '/booking/wiz-login',
+      logoutUrl: '/booking/wiz-logout',
+      getSummaryUrl: '/booking/summary',
+      deletePendingBookingUrl: '/booking/delete-pending',
+      getSiteContentUrl: '/booking/get-site-content',
+      siteId: 12,
+      currency: 1,
+      location: 'Tokyo Joypolis',
+      accessCode: '',
+      siteConfig: null,
+      pendingBookingId: null,
+      expirationMinutes: null,
+      packages: null,
+      perTicketPrice: null,
+      selected: {
+        date: null,
+        gameSpaceId: null
+      },
+      localisation: {
+        sessions: 'Sessions',
+        available: 'Available',
+        soldOut: 'Sold Out',
+        limited: 'Limited',
+        timeFormat: 'h:mm tt',
+        shortDateTimeFormat: 'd MMM h:mm tt',
+        yearMonthFormat: 'MMMM yyyy',
+        firstDayOfWeek: 0,
+        total: 'Total',
+        dateWheel: {
+          soldOut: 'Sold Out',
+          open: 'Open',
+          limited: 'Limited',
+          closed: 'Closed',
+          comingSoon: 'Coming Soon'
+        }
+      }
+    }
+  </script>
+
+  <script src="./js/Session.js"></script>
+
+  <script>
+    WizSession.start();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+/* 订单样式 */
+.order-block{
+  .order-item{
+    position: relative;
+    padding: 12px 15px 0;
+    background: #fff;
+    margin-bottom: 10px;
+    .order-info-group{
+      .order-info + .order-info{
+        margin-top: 0.5rem;
+      }
+    }
+    .order-info{
+      display: flex;
+      .image{
+        flex: 0  0 74px;
+        border: 1px solid #E5E5E5;
+        border-radius: 4px;
+        margin-right: 8px;
+        font-size: 0;
+        overflow: hidden;
+        img{
+          width: 100%;
+    
+        }
+      }
+      .con{
+        flex: 1;
+        padding-top: 9px;
+        .order-title{
+          font-size: 12px;
+          line-height: 1;
+          margin-bottom: 10px;
+        }
+        .info{
+          font-size: 11px;
+          color: #999;
+
+        }
+      }
+    }
+    .order-control{
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      align-items: center;
+      position: relative;
+      margin-top: 10px;
+      &:after{
+        content:'';
+        position: absolute;
+        top: 0;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #E5E5E5;
+        // background-color: red;
+        display: block;
+        z-index: 15;
+        transform-origin: 50% 100%;
+        transform: scaleY(.5);
+      }
+      .order-sum{
+        font-size: 12px;
+        display: flex;
+        .label{
+          margin-right: 2px;
+        }
+
+        i{
+          color: #C71D47;
+        }
+      }
+      .order--button-group{
+        font-size: 12px;
+        line-height: 1;
+        a{
+          display: inline-block;
+          border: 1px solid #666666;
+          color: #666666;
+          padding: 6px 10px;
+          border-radius: 4px;
+        }
+        .pay_button{
+          color: $bodycolor;
+          border-color: $bodycolor;
+        }
+        .del_button{
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+  .beenBuy{
+    .order-info{
+
+    }
+  }
+  .beenBuy-mask{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75px;
+    height: 75px;
+    background: url('../images/beenBuy-mask.png') no-repeat center top;
+    z-index: 2;
+  }
+}

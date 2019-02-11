@@ -1,0 +1,123 @@
+/* 订单详情 */
+.order--details-inner{
+  .order-adress{
+    background: #fff;
+    padding: 12px 15px;
+    display: flex;
+    line-height: 1;
+    margin-bottom: 10px;
+    .iconfont{
+      flex: 0 0 18px;
+      margin-right: 10px;
+    }
+    .con{
+      flex: 1;
+      .infos{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 14px;
+        margin-bottom: 10px;
+        .user-name{
+          margin-right: 9px;
+          margin-bottom: 5px;
+        }
+      }
+      .adress-text{
+        font-size: 12px;
+        color: #666;
+        display: flex;
+        flex-wrap: wrap;
+        .text{
+          flex: 1;
+        }
+      }
+    }
+  }
+  .order-item{
+    position: relative;
+    padding: 12px 15px 0;
+    background: #fff;
+    margin-bottom: 10px;
+
+    .order-info{
+      display: flex;
+      .image{
+        flex: 0 0 74px;
+        border: 1px solid #e5e5e5;
+        border-radius: 4px;
+        margin-right: 8px;
+        font-size: 0;
+        overflow: hidden;
+      }
+      .con{
+        flex: 1;
+        padding-top: 9px;
+        .order-title{
+          font-size: 12px;
+          line-height: 1;
+          margin-bottom: 10px;
+        }
+        .info{
+          font-size: 11px;
+          color: #999;
+        }
+      }
+    }
+    .order-info + .order-info{
+      margin-top: 10px;
+    }
+    .order-control{
+      justify-content: space-between;
+      padding: 12px 0;
+      align-items: center;
+      position: relative;
+      margin-top: 10px;
+      .order-sum{
+        display: flex;
+        font-size: 12px;
+        i{
+          color: $bodycolor;
+        }
+        .label{
+          margin-right: 2px;
+        }
+      }
+      @include border-1px(0, 0, 0, auto);
+    }
+  }
+  .order-infos{
+    background: #fff;
+    margin-bottom: 10px;
+    .item{
+      position: relative;
+      color: #666;
+      font-size: 14px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      .row{
+        display: flex;
+        overflow:visible;
+        flex-wrap: wrap;
+        word-break: break-all;
+        & + .row{
+          margin-top: 10px;
+        }
+      }
+
+      .tip{
+        font-size:10px;
+        color: #DCAB23;
+      }
+      .text{
+        flex: 1;
+      }
+    }
+    .item + .item{
+      @include border-1px(0, 0, 0, auto);
+    }
+    .row{
+      margin: 0;
+    }
+  }
+}

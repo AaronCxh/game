@@ -1,0 +1,94 @@
+.paging{
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0.75rem;
+  a{
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.5rem;
+    border-radius: 50px;
+    background: $bodycolor;
+    color: #000 !important;
+    line-height: 1;
+  }
+  .next{
+    margin-left: 0.5rem;
+  }
+  .disabled{
+    background: #555555;
+  }
+}
+
+
+.paging-v2{
+  position: relative;
+  font-size: 0.6rem;
+  color: #999;
+  padding: 12px 0;
+  @include border-1px(0, 0, 0, auto, $borderColor); 
+  margin-top: 12px;
+  .disabled{
+    background-color: transparent !important;
+  }
+  .arrow-left{
+    margin-bottom: 5px;
+  }
+  .arrow{
+    display: flex;
+    a{
+      color: #999;
+      margin-right: 2px;
+      flex: 0 0 40px;
+    }
+    span{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      flex: 1;
+      width: 1%;
+    }
+  }
+}
+
+.paging-v3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #fff;
+  .disabled{
+    opacity: 0.3;
+  }
+  a{
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50px;
+    background: #fff;
+    color: #333;
+    font-size: 0.7rem;
+    box-shadow: 0 0 20px rgba($color: #000, $alpha: 0.1);
+    line-height: 1;
+  }
+}
+
+.paging-v4{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding:0 0.75rem;
+  min-height: 2.2rem;
+  align-items: center;
+  @include border-1px(0.75rem,0.75rem,0,auto, $borderColor);
+  .back{
+    color: $bodycolor;
+  }
+  .disabled{
+    opacity: 0.3;
+  }
+  a{
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+}

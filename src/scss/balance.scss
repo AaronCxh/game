@@ -1,0 +1,221 @@
+/* 我的余额样式 */
+
+.balance-block{
+  background-color: #fff;
+  padding: 70px 15px 0;
+  .save-button{
+    background: #E4393C;
+  }
+  .balance-title{
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .sum{
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+    font-family:HiraginoSansGB-Bold;
+    font-weight: bold;
+    color: $bodycolor;
+  }
+  .infos{
+    display: flex;
+    align-content: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    span{
+      flex: 1;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      em{
+        margin-right: 6px;
+      }
+      i{
+        color: $bodycolor;
+      }
+    }
+    span:last-child{
+      justify-content: flex-end;
+      border-left: 1px solid #ddd;
+    }
+  }
+  .form-title{
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  .form-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    .label{
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .money{
+      color: $bodycolor;
+    }
+    .con{
+      font-size: 12px;
+      flex: 1;
+    }
+    .form-control{
+      width: 100px;
+      display: inline-block;
+    }
+    .unit{
+      margin-left: 5px;
+    }
+  }
+
+  .sub-tip{
+    font-size: 10px;
+    color: #999;
+    margin-bottom: 15px;
+  }
+  .tip-panel{
+    margin-top: 17px;
+    p,div{
+      b{
+        font-size: 14px;
+        display: flex;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+.balance--button-group{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 72px 0 0;
+  // padding: 0 0.75rem;
+  .button{
+    display: block;
+    padding: 10px (155px/2);
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .default_button{
+    background: #E4393C;
+    color: #fff;
+  }
+  .extract_button{
+    background: #fff;
+    color: #E4393C;
+    border-color: #E4393C;
+  }
+
+}
+
+.balance-link{
+  font-size: 0.5rem !important;
+  line-height: 2.5rem !important;
+}
+
+.pay-inner{
+  padding: 0 15px 10px;
+  font-size: 0.65rem;
+  .tip-panel{
+    margin-top: 30px;
+  }
+  .pay-item{
+    background: #fff;
+    margin: 0 -0.75rem;
+    padding: 0 0.75rem;
+  }
+  .form-item{
+    display: flex;
+    align-items: center;
+    height: 44px;
+    .con{
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+    input{
+      border: 0;
+    }
+  }
+  .button{
+    background: #E4393C;
+  }
+}
+.disabled{
+  background: #c8c9cb !important;
+}
+
+.money{
+  color: $bodycolor;
+  font-weight: bold;
+  font-family:HiraginoSansGB-W3;
+}
+
+
+.phone-verify{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 , 0, 0, 0.5);
+  padding: 0 10px;
+  .verify-modal{
+    background: #fff;
+    margin-top: 75px;
+  }
+  .header{
+    position: relative;
+    font-size: 0.65rem;
+    padding: 10px 7px;
+    @include border-1px(0,0,auto, 0);
+    .close{
+      position: absolute;
+      right: 7px;
+      top: 10px;
+      border: 0;
+      background: transparent;
+      color: #999999;
+    }
+  }
+  .body{
+    font-size: 0.65rem;
+    padding: 15px 7px;
+    .item{
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      .label{
+        flex: 0 0 52px;
+      }
+      .con{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-right: 40px;
+      }
+      .getCode{
+        white-space: nowrap;
+        color: $bodycolor;
+        margin-left: 10px;
+      }
+    }
+  }
+  .footer{
+    text-align: right;
+    padding: 10px 15px;
+    .button{
+      display: inline-block;
+      background: $bodycolor;
+      color: #fff !important;
+      padding: 5px 10px;
+    }
+  }
+}

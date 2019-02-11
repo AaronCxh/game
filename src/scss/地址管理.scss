@@ -1,0 +1,72 @@
+/* 地址管理样式 */
+.adress-manage{
+  .adress-card{
+    background: #fff;
+    padding: 12px 15px 0px;
+    margin-bottom: 10px;
+  }
+  .adress-inner{
+    .infos{
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      line-height: 1.5;
+      .user-name{
+        margin-right: 9px;
+        margin-bottom: 5px;
+      }
+    }
+    .adress-text{
+      font-size: 12px;
+      color: #666;
+    }
+    .adrss-control{
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      position: relative;
+      margin-top: 25px;
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: auto;
+        right: 0;
+        top: 0;
+        height: 1px;
+        background-color: #E5E5E5;
+        // background-color: red;
+        display: block;
+        z-index: 15;
+        transform-origin: 50% 100%;
+        transform: scaleY(.5);
+      }
+      .c_radio{
+        margin-right: 8px;
+      }
+      span{
+        display: flex;
+        align-items: center;
+        font-size: 0.65rem;
+      }
+      .edit-btn{
+        display: flex;
+        align-items: center;
+        font-size: 0.65rem;
+        .iconfont{
+          margin-right: 4px;
+        }
+      }
+      .del-btn{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-size: 0.65rem;
+        .iconfont{
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}

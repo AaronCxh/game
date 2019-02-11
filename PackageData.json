@@ -1,0 +1,84 @@
+﻿[{
+  "Name": "2 x Sol Raiders",
+  "PackageId": 935,
+  "Availability": "available",
+  "Description": "<p>Player VS Player team-based shooter experience.</p><p>Pilot your combat rig across 3 unique maps raiding for Sol. The winners make the score. The losers are just scrap metal.</p>",
+  "Details": "2-8 Players, 30 min",
+  "Image1": "https://zerolatencyvr.blob.core.windows.net/packages/935-1.png",
+  "Name": "2 x Sol Raiders",
+  "PackageId": "935",
+  "VideoUrl": "https://www.youtube.com/embed/ADOEuzyYstc?rel=0&amp;autoplay=1",
+  "Slots": [{
+    "TimeCode": "201902121700",
+    "StartTime": "5:00 PM",
+    "EndTime": "5:30 PM",
+    "Price": 66.00,
+    "AvailableSlots": 0,
+    "SoldSlots": 8,
+    "GameSpaceId": 1
+  }, {
+    "TimeCode": "201902121730",
+    "StartTime": "5:30 PM",
+    "EndTime": "6:00 PM",
+    "Price": 66.00,
+    "AvailableSlots": 8,
+    "SoldSlots": 0,
+    "GameSpaceId": 1
+  }, {
+    "TimeCode": "201902121800",
+    "StartTime": "6:00 PM",
+    "EndTime": "6:30 PM",
+    "Price": 66.00,
+    "AvailableSlots": 8,
+    "SoldSlots": 0,
+    "GameSpaceId": 1
+  }, {
+    "TimeCode": "201902121830",
+    "StartTime": "6:30 PM",
+    "EndTime": "7:00 PM",
+    "Price": 66.00,
+    "AvailableSlots": 8,
+    "SoldSlots": 0,
+    "GameSpaceId": 1
+  }, {
+    "TimeCode": "201902121915",
+    "StartTime": "7:15 PM",
+    "EndTime": "7:45 PM",
+    "Price": 66.00,
+    "AvailableSlots": 6,
+    "SoldSlots": 2,
+    "GameSpaceId": 1
+  }, {
+    "TimeCode": "201902121945",
+    "StartTime": "7:45 PM",
+    "EndTime": "8:15 PM",
+    "Price": 66.00,
+    "AvailableSlots": 4,
+    "SoldSlots": 4,
+    "GameSpaceId": 1
+  }, {
+    "TimeCode": "201902122015",
+    "StartTime": "8:15 PM",
+    "EndTime": "8:45 PM",
+    "Price": 66.00,
+    "AvailableSlots": 8,
+    "SoldSlots": 0,
+    "GameSpaceId": 1
+  }, {
+    "TimeCode": "201902122045",
+    "StartTime": "8:45 PM",
+    "EndTime": "9:15 PM",
+    "Price": 66.00,
+    "AvailableSlots": 8,
+    "SoldSlots": 0,
+    "GameSpaceId": 1
+  }, {
+    "TimeCode": "201902122115",
+    "StartTime": "9:15 PM",
+    "EndTime": "9:45 PM",
+    "Price": 66.00,
+    "AvailableSlots": 8,
+    "SoldSlots": 0,
+    "GameSpaceId": 1
+  }]
+}]

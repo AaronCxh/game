@@ -1,0 +1,25 @@
+/* 收银台样式 */
+.pay-content{
+  margin-top: 10px;
+  .pay-name{
+    position: relative;
+    font-size: 12px;
+    color: #666;
+    padding: 15px;
+    background: #fff;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: auto;
+      height: 1px;
+      background-color: #E5E5E5;
+      display: block;
+      z-index: 15;
+      transform-origin: 50% 100%;
+      transform: scaleY(.5);
+    }
+  }
+}

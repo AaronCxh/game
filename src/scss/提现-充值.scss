@@ -1,0 +1,158 @@
+/* 我的余额样式 */
+
+.balance-block{
+  background-color: #fff;
+  padding: 1rem 0.75rem 0.75rem;
+  .balance-title{
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .sum{
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: bold;
+    font-family: "微软雅黑";
+    .unit{
+      font-size: 0.65rem;
+      color: #333;
+    }
+  }
+  .infos{
+    display: flex;
+    align-content: center;
+    // padding-bottom: 0.75rem;
+    span{
+      flex: 1;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      em{
+        margin-right: 6px;
+      }
+      i{
+        color: #C91E4A;
+      }
+    }
+    span:last-child{
+      justify-content: flex-end;
+      border-left: 1px solid #ddd;
+    }
+  }
+  .form-title{
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  .form-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    .label{
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .money{
+      color: $bodycolor;
+    }
+    .con{
+      font-size: 12px;
+      flex: 1;
+    }
+    .form-control{
+      width: 100px;
+      display: inline-block;
+    }
+    .unit{
+      margin-left: 5px;
+    }
+    .user-name{
+      color: #003962;
+    }
+  }
+
+  .sub-tip{
+    font-size: 10px;
+    color: #999;
+    margin-bottom: 15px;
+  }
+  .tip-panel{
+    padding: 10px 6px;
+    border: 1px solid #F4E0CA;
+    background-color: #FEF1E3;
+    p,div{
+      color: #E28022;
+      line-height: 1.5;
+      font-size: 10px;
+      b{
+        font-size: 14px;
+        display: flex;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+.balance--button-group{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 55px 0 0;
+  .button{
+    display: inline-block;
+    padding: 10px (155px/2);
+    margin-bottom: 25px;
+  }
+  .default_button{
+    background: $bodycolor;
+    color: #fff;
+  }
+  .extract_button{
+    background: #003962;
+    color: #fff;
+  }
+}
+
+.pay-inner{
+  padding: 0 0.75rem 0.5rem;
+  font-size: 0.65rem;
+  .tip-panel{
+    margin-top: 30px;
+  }
+  .pay-item{
+    background: #fff;
+    margin: 0 -0.75rem;
+    padding: 0 0.75rem;
+  }
+  .form-item{
+    display: flex;
+    align-items: center;
+    height: 44px;
+    .con{
+      display: flex;
+      align-items: center;
+      flex: 1;
+    }
+    input{
+      border: 0;
+    }
+  }
+  // .button{
+  //   background: #E4393C;
+  // }
+}
+.disabled{
+  background: #c8c9cb !important;
+}
+.pay-name{
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+}
+.money{
+  color: $bodycolor;
+  font-weight: bold;
+  font-family:HiraginoSansGB-W3;
+}
+

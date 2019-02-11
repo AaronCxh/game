@@ -1,0 +1,147 @@
+/* 购物评价 */
+.mycomment-detail{
+  .orderinfo{
+    position: relative;
+    font-size: 14px;
+    color: #666;
+    padding: 15px;
+    @include border-1px(0, 0, auto, 0);
+    .o-info{
+      display: flex;
+      flex-direction: column;
+      a{
+        color: inherit;
+      }
+      span + span{
+        margin-top: 10px;
+      }
+    }
+  }
+  .orderUser{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: wrap;
+    line-height: 1;
+    .o-user{
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+    }
+    .o-userName{
+      font-size: 14px;
+      margin-left: 8px;
+    }
+    .o-userImg{
+      flex: 0 0 43px;
+      width: 43px;
+      font-size: 0;
+      img{
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+    .o-time{
+      font-size: 12px;
+      color: #ccc;
+    }
+  }
+  .mycomment-form{
+    display: flex;
+    flex-direction: column;
+  }
+  .comment-goods{
+    position: relative;
+    display: flex;
+    padding: 15px;
+    @include border-1px(0, 0, auto, 0);
+    user-select: none;
+    .p-img{
+      flex: 0 0 74px;
+      margin-right: 10px;
+      font-size: 0;
+    }
+    .con{
+      padding-top: 5px;
+      flex: 1;
+      font-size: 14px;
+
+      .p-attr{
+        color: #999;
+      }
+      .p-price{
+        color: $bodycolor;
+      }
+    }
+  }
+  .fop-star{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    .fop-label{
+      font-size: 14px;
+      color: #666;
+      margin-right: 10px;
+    }
+    .fop-main{
+      display: flex;
+      align-items: center;
+      .commstar {
+        display: flex;
+        align-items: center;
+        // margin:0 10px;
+        margin-right: 10px;
+        .iconfont{
+          font-size: 25px;
+          color: #F34747;
+        }
+      }
+      .star{
+        font-size: 0;
+      }
+      .star-info{
+        font-size: 14px;
+        color: #F34747;
+      }
+    }
+  }
+  .fop-message{
+    position: relative;
+    @include border-1px(0, 0, 0, auto);
+    .f-textarea{
+      position: relative;
+      padding: 15px 15px 0;
+      @include border-1px(15px, 15px, auto, 0);
+    }
+    textarea{
+      display: block;
+      width: 100%;
+      resize: none;
+      border: 0;
+      height: 100px;
+    }
+  }
+  .comment-text{
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  &.details{
+    .fop-star{
+      padding: 0 15px;
+      margin-bottom: 10px;
+    }
+    .comment-goods{
+      margin-top: 20px;
+      align-items: center;
+      &:after{
+        top: 0;
+        bottom: auto;
+        left: 15px;
+        right: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>礼物-种类</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,400i,500,500i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    body {
+      background-image: url('./images/bookWizardBackground.jpg');
+      background-repeat: no-repeat;
+      background-position: center 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="top-nav">
+    <div class="top-nav-links">
+      <a class="" href="/brisbane/book-now">Book Now</a>
+      <a href="/brisbane/gift-vouchers">Buy Gift Voucher</a>
+      <a href="/brisbane/login">Log In</a>
+    </div>
+
+
+  </nav>
+
+  <div class="gift">
+    <div class="header">
+      <strong class="subtitle">Send The Ultimate Experience</strong>
+      <h1>E-Gift Vouchers</h1>
+    </div>
+
+    <div class="location-summary">
+      <strong>Brisbane</strong>
+      <a href="./礼物.html">Change location</a>
+    </div>
+
+    <form method="post" id="GiftVoucherForm">
+      <input type="hidden" name="SiteId" value="40">
+
+      <div class="title-section">
+        <h3>Amount</h3>
+        <p>Select how many tickets or contribute an amount towards an experience</p>
+      </div>
+
+      <div class="choose-amount" id="ChooseAmountDetails">
+        <div class="amount-options">
+          <div class="fixed-amounts">
+            <div class="fixed-amount-container">
+              <div class="fixed-amount selected" data-amount="88.0">
+                <span>1 Ticket</span>
+                <strong>$88.00</strong>
+              </div>
+            </div>
+            <div class="fixed-amount-container">
+              <div class="fixed-amount" data-amount="176.0">
+                <span>2 Tickets</span>
+                <strong>$176.00</strong>
+              </div>
+            </div>
+            <div class="fixed-amount-container">
+              <div class="fixed-amount" data-amount="264.0">
+                <span>3 Tickets</span>
+                <strong>$264.00</strong>
+              </div>
+            </div>
+            <div class="fixed-amount-container">
+              <div class="fixed-amount" data-amount="352.0">
+                <span>4 Tickets</span>
+                <strong>$352.00</strong>
+              </div>
+            </div>
+            <div class="fixed-amount-container">
+              <div class="fixed-amount" data-amount="440.0">
+                <span>5 Tickets</span>
+                <strong>$440.00</strong>
+              </div>
+            </div>
+            <div class="fixed-amount-container">
+              <div class="fixed-amount" data-amount="528.0">
+                <span>6 Tickets</span>
+                <strong>$528.00</strong>
+              </div>
+            </div>
+            <div class="fixed-amount-container">
+              <div class="fixed-amount" data-amount="616.0">
+                <span>7 Tickets</span>
+                <strong>$616.00</strong>
+              </div>
+            </div>
+            <div class="fixed-amount-container">
+              <div class="fixed-amount" data-amount="704.0">
+                <span>8 Tickets</span>
+                <strong>$704.00</strong>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="or"><span>Or</span></div>
+
+          <div class="other" id="OtherAmount">
+            <a class="other-link" id="EnterOtherLink">Gift Voucher Any Amount</a>
+            <div class="other-input">
+              <input type="text" id="OtherCredit" data-min-value="20.00" data-max-value="1000.00" maxlength="6"
+                data-clean="true">
+            </div>
+          </div>
+        </div>
+
+        <input type="hidden" id="Credit" name="Credit" value="88.0">
+
+        <div class="error-message" data-for="OtherCredit" data-type="required" style="display: none;">Please enter an
+          amount</div>
+        <div class="error-message" data-for="OtherCredit" data-type="numeric" style="display: none;">Invalid amount</div>
+      </div>
+
+      <div class="choose-method" id="SendMethods">
+        <h3>Choose Recipient</h3>
+        <input type="hidden" id="SendMethod" name="SendMethod" value="self">
+        <div class="methods">
+          <div class="method-option selected" data-method="self">
+            <h3>Send To Me</h3>
+          </div>
+          <div class="method-option" data-method="friend">
+            <h3>Send To Recipient</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="form hero-form">
+        <div class="half-container" id="FromDetails">
+          <div>
+            <label for="FromName">Your Name</label>
+            <input type="text" name="FromName" id="FromName" data-clean="true">
+            <div class="error-message" data-for="FromName" data-type="required" style="display: none;">Please provide
+              from name</div>
+          </div>
+          <div>
+            <label for="FromEmail">Your Email</label>
+            <input type="text" name="FromEmail" id="FromEmail" data-clean="true">
+            <div class="error-message" data-for="FromEmail" data-type="required" style="display: none;">Please provide
+              from email</div>
+            <div class="error-message" data-for="FromEmail" data-type="email" style="display: none;">Invalid email
+              address</div>
+          </div>
+        </div>
+
+        <div id="FriendDetails" style="display:none">
+          <div class="half-container">
+            <div>
+              <label for="RecipientName">Recipient's Name</label>
+              <input type="text" name="RecipientName" id="RecipientName" data-clean="true">
+              <div class="error-message" data-for="RecipientName" data-type="required" style="display: none;">Please
+                provide recipient name</div>
+            </div>
+
+            <div>
+              <label for="RecipientEmail">Recipient's Email</label>
+              <input type="email" name="RecipientEmail" id="RecipientEmail" data-clean="true">
+              <div class="error-message" data-for="RecipientEmail" data-type="required" style="display: none;">Please
+                provide a recipient email</div>
+              <div class="error-message" data-for="RecipientEmail" data-type="email" style="display: none;">Invalid
+                email address</div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div>
+              <label for="Message">Message (Optional)</label>
+              <textarea name="Message" id="Message"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <a class="button ghost" id="BuyButton">Buy</a>
+      </div>
+    </form>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script>
+    var navLinkCount = 8;
+  </script>
+  <script src="./js/jquery-1.11.0.js"></script>
+  <script src="./js/swiper.min.js"></script>
+  <script src="./js/main.js"></script>
+
+  <script>
+    $('#SendMethods').on('click', '.method-option', function () {
+      var $this = $(this);
+      $('#SendMethods .method-option').removeClass('selected');
+      $this.addClass('selected');
+
+      var method = $this.data('method');
+      $('#SendMethod').val(method);
+      if (method === 'self') {
+        $('#FriendDetails').slideUp(200);
+      } else {
+        $('#FriendDetails').slideDown(200);
+      }
+    });
+
+    $('#BuyButton').on('click', function () {
+      var method = $('#SendMethod').val();
+
+      var fromValidation = validation.validateForm('#FromDetails');
+      var friendValidation = validation.validateForm('#FriendDetails');
+
+      var creditValidation = true;
+      if ($('#OtherAmount').hasClass('selected')) {
+        creditValidation = validation.validateForm('#ChooseAmountDetails');
+      }
+
+      var credit = parseFloat($('#Credit').val());
+
+      if (creditValidation && ((method === 'self' && fromValidation) || (method === 'friend' && fromValidation &&
+          friendValidation))) {
+        $('#BuyButton').addClass('disabled');
+        $('#GiftVoucherForm').submit();
+      }
+    });
+
+    $('#OtherCredit').on('change keyup', function () {
+      $('#Credit').val($('#OtherCredit').val());
+    });
+
+    $('.fixed-amount').on('click', function () {
+      $('.fixed-amount').removeClass('selected');
+      $('#OtherAmount').removeClass('selected');
+      
+      validation.clearValidators('.choose-amount');
+
+      var $this = $(this);
+      $this.addClass('selected');
+
+      var amount = $this.data('amount');
+      $('#Credit').val(amount);
+
+      if ($this.hasClass('other')) {
+        $('#OtherCredit').focus();
+        $('#Credit').val($('#OtherCredit').val());
+      }
+    });
+
+    $('#EnterOtherLink').on('click', function () {
+      $('.fixed-amount').removeClass('selected');
+      $('#OtherAmount').addClass('selected');
+      $('#OtherCredit').focus();
+      $('#Credit').val($('#OtherCredit').val());
+    });
+  </script>
+</body>
+
+</html>

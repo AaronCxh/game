@@ -1,0 +1,77 @@
+/* 产品详情 */
+.prod-details{
+  .prod-intro{
+    background: #fff;
+    .edit{
+      padding: 0.75rem;
+    }
+  }
+  .introl-label{
+    position: relative;
+    font-size: 0.65rem;
+    color: #333;
+    padding: 10px 15px;
+    @include border-1px(0, 0, auto, 0);
+  }
+  .prod-infos{
+    margin-bottom: 10px;
+    background: #fff;
+    .prod-info{
+      padding: 15px;
+      line-height: 1;
+      .name{
+        font-size: 0.75rem;
+        color: #000;
+        margin-bottom: 8px;
+      }
+      .text{
+        font-size: 0.65rem;
+        color: #666;
+        margin-bottom: 13px;
+        line-height: 1.4;
+      }
+      .price{
+        color: #ec0117;
+        font-size: 0.7rem;
+        font-weight: 700;
+        .cur-price{
+          font-size: 0.6rem;
+          color: #999999;
+          font-weight: 400;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+  .prod-images{
+    position: relative;
+    border-bottom: 1px solid $borderColor;
+    .swiper-slide {
+      position: relative;
+      display: block;
+      font-size: 0;
+      padding-top: 100%;
+      img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+    .img-count{
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      z-index: 1;
+      font-size: 14px;
+      .index{
+        color: #F84646;
+      }
+    }
+  }
+
+  .prod-comment{
+    background: #fff;
+  }
+}

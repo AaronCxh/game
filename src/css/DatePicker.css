@@ -1,0 +1,165 @@
+﻿.calendar-popup {
+  font-size: 14px;
+  text-transform: uppercase;
+  position: absolute;
+  right: 30px;
+  top: 162px;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: all ease-in-out 0.15s;
+  transform: translateY(-20px);
+}
+
+.date-picker.show-popup .calendar-popup, .calendar-popup.show {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 11;
+  transform: translateY(0);
+}
+
+.calendar-popup .date-selection {
+  width: 300px;
+  height: auto;
+  background-color: rgba(10, 35, 44, 0.95);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 80px;
+  border: 2px solid rgba(56, 188, 238, 0.2);
+}
+
+.calendar-body {
+  padding: 10px;
+}
+
+.date-picker-table {
+  width: 100%;
+}
+
+.date-picker-table th, .date-picker-table td {
+  width: calc(100% / 7);
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+}
+
+.date-picker-table thead {
+  border-bottom: 1px solid rgba(56, 188, 238, 0.1);
+}
+
+.date-picker-table th {
+  color: #38bcee;
+  font-weight: 400;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.date-picker-table td {
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.date-picker-table td.open,
+.date-picker-table td.sold,
+.date-picker-table td.limited {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.date-picker-table td.open {
+  color: #fff;
+}
+
+.date-picker-table td.sold {
+  color: #ff3d3f;
+}
+
+.date-picker-table td.limited {
+  color: #f3e65e;
+}
+
+.date-picker-table td:hover {
+  background-color: rgba(56, 188, 238, 0.1);
+}
+
+.date-picker-table td.today:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid rgba(56, 188, 238, 0.2);
+  border-radius: 3px;
+}
+
+.date-picker-table td.current {
+  background-color: rgba(56, 188, 238, 0.2);
+}
+
+.calendar-popup .different-month {
+  visibility: hidden;
+}
+
+.calendar-popup header {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  background-color: rgba(56, 188, 238, 0.1);
+  border-bottom: 1px solid rgba(56, 188, 238, 0.2);
+}
+
+.calendar-popup header a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 20px;
+  background-image: url(../images/weekNavArrow.png);
+  opacity: 0.3;
+  transition: all ease-in-out 0.3s;
+}
+
+.calendar-popup header a:hover {
+  opacity: 1;
+}
+
+.calendar-popup header a.prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.calendar-popup header a.next {
+  right: 0;
+}
+
+.calendar-popup header a span {
+  display: none;
+}
+
+.calendar-popup .month-selection {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .calendar-popup {
+      left: unset;
+      right: unset;
+      width: 100%;
+      margin: -20px;
+  }
+
+  .calendar-popup .date-selection {
+      width: 100%;
+      margin: 0;
+      background-color: rgba(10, 35, 44, 1);
+  }
+}

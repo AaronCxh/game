@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>忘记密码</title>
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,400i,500,500i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <header class="base-header">
+    <div>
+      <div class="menu-left">
+        <a href="/" class="logo" style="background-image: url('./images/zeroLatency.png')"><span>Zero Latency</span></a>
+      </div>
+      <a class="menu" id="ToggleMenu"><span>Menu</span></a>
+
+      <div class="menu-right">
+        <div class="account-link">
+
+          <span class="label">Login</span>
+          <a href="/account">Account</a>
+        </div>
+        <a class="button book-tickets" href="/booking-location/">Book<span> Tickets</span></a>
+      </div>
+    </div>
+  </header>
+  <nav class="base-menu">
+    <div class="main-menu-items">
+      <div class="main-menu-inner" id="MenuSlider" style="width: 2560px; transform: translateX(-561.229px);">
+        <a href="/locations/">
+          <div class="menu-item-img" style="background-image:url('https://zerolatencyvr.com/media/1011/locations.jpg')"></div>
+          <p>
+            <span>24 Global</span>
+            <strong>Locations</strong>
+          </p>
+        </a>
+        <a href="/what-to-expect/">
+          <div class="menu-item-img" style="background-image:url('https://zerolatencyvr.com/media/1013/whattoexpect.jpg')"></div>
+          <p>
+            <span>Free-Roam VR</span>
+            <strong>What to Expect</strong>
+          </p>
+        </a>
+        <a href="/gift-vouchers">
+          <div class="menu-item-img" style="background-image:url('https://zerolatencyvr.com/media/1006/giftvouchers.jpg')"></div>
+          <p>
+            <span>The Ultimate Gift</span>
+            <strong>E-Gift Vouchers</strong>
+          </p>
+        </a>
+        <a href="/group-bookings/">
+          <div class="menu-item-img" style="background-image:url('https://zerolatencyvr.com/media/1007/groupbookings.jpg')"></div>
+          <p>
+            <span>Reward &amp; Develop Your Team</span>
+            <strong>Corporate Events</strong>
+          </p>
+        </a>
+        <a href="/blog/">
+          <div class="menu-item-img" style="background-image:url('https://zerolatencyvr.com/media/1073/medianavitem.jpg')"></div>
+          <p>
+            <span>The Latest</span>
+            <strong>Blog</strong>
+          </p>
+        </a>
+        <a href="/commercial/">
+          <div class="menu-item-img" style="background-image:url('https://zerolatencyvr.com/media/1050/commercial.jpg')"></div>
+          <p>
+            <span>Buy a ZL System</span>
+            <strong>Commercial</strong>
+          </p>
+        </a>
+        <a href="/about/">
+          <div class="menu-item-img" style="background-image:url('https://zerolatencyvr.com/media/1051/about.jpg')"></div>
+          <p>
+            <span>Our Story</span>
+            <strong>About Us</strong>
+          </p>
+        </a>
+        <a href="/contact/">
+          <div class="menu-item-img" style="background-image:url('https://zerolatencyvr.com/media/1040/contact.jpg')"></div>
+          <p>
+            <span>Get In Touch</span>
+            <strong>Contact Us</strong>
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <div class="bottom-links">
+      <div class="social-links">
+        <a href="https://www.facebook.com/zerolatencyau" target="_blank" rel="noopener" style="background-image:url('./images/facebook.png')"><span>Facebook</span></a>
+        <a href="https://www.instagram.com/zerolatencyvr" target="_blank" rel="noopener" style="background-image:url('./images/instagram.png')"><span>Instagram</span></a>
+        <a href="https://twitter.com/zerolatencyVR" target="_blank" rel="noopener" style="background-image:url('./images/twitter.png')"><span>Twitter</span></a>
+        <a href="https://au.linkedin.com/company/zero-latency" target="_blank" rel="noopener" style="background-image:url('./images/linkedin.png')"><span>LinkedIn</span></a>
+        <a href="https://www.youtube.com/c/Zerolatencymediaaustralia" target="_blank" rel="noopener" style="background-image:url('./images/youtube.png')"><span>Youtube</span></a>
+      </div>
+      <div class="other-links">
+        <a href="/faq/">FAQ</a>
+        <a href="/policies/">Policy</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="internal-intro">
+      <content>
+        <h1><span>Reset Password</span></h1>
+        <p class="content-intro">Fill in your email below and we can send you a new password.</p>
+        <form class="form" method="post" id="ResetPasswordForm">
+          <div class="login-form">
+            <div class="input-row">
+              <input type="text" id="Email" name="Email" autofocus="" data-clean="true">
+              <div class="error-message" data-for="Email" data-type="required" style="display: none;">Please provide
+                your email address</div>
+              <div class="error-message" data-for="Email" data-type="email" style="display: none;">Invalid email
+                address</div>
+            </div>
+            <a class="button" id="ResetPassword"><span>Reset Password</span></a>
+          </div>
+        </form>
+      </content>
+    </section>
+
+
+  </main>
+
+  <footer class="base-footer">
+    <div>
+      <div class="social-links">
+        <a class="social" href="https://www.facebook.com/zerolatencyau" target="_blank" rel="noopener" style="background-image:url('./images/facebook.png')"><span>Facebook</span></a>
+        <a class="social" href="https://www.instagram.com/zerolatencyvr" target="_blank" rel="noopener" style="background-image:url('./images/instagram.png')"><span>Instagram</span></a>
+        <a class="social" href="https://twitter.com/zerolatencyVR" target="_blank" rel="noopener" style="background-image:url('./images/twitter.png')"><span>Twitter</span></a>
+        <a class="social" href="https://au.linkedin.com/company/zero-latency" target="_blank" rel="noopener" style="background-image:url('./images/linkedin.png')"><span>LinkedIn</span></a>
+        <a class="social" href="https://www.youtube.com/c/Zerolatencymediaaustralia" target="_blank" rel="noopener"
+          style="background-image:url('./images/youtube.png')"><span>Youtube</span></a>
+      </div>
+      <div class="other-links">
+        <a href="/faq/">FAQ</a>
+        <a href="/policies/">Policy</a>
+        <a href="/privacy/">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    var navLinkCount = 8;
+  </script>
+  <script src="./js/jquery-1.11.0.js"></script>
+  <script src="./js/swiper.min.js"></script>
+  <script src="./js/main.js"></script>
+
+
+
+</body>
+
+</html>
