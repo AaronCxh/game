@@ -1,9 +1,78 @@
 /* 标准字号0.7rem,标题字号0.8rem; */
 @import "./variable/variable.scss";
 @import "./minxi/minxi.scss";
+.input-spinner-container{
+  position: relative;
+}
+.input-spinner-container .spinner{
+  opacity: 0;
+  transform: scale(0.5);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  width: 25px;
+  transition: all ease-in-out 0.2s;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 25px;
+    background-image: url(../images/inputLoader.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    animation-duration: 0.4s;
+    animation-name: spin;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    pointer-events: none;
+  }
+}
+.input-spinner-container.on .spinner {
+  opacity: 1;
+  transform: scale(1);
+}
+.back-button {
+  float: left;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #256b86;
+  margin-right: 15px;
+  position: relative;
+  top: 8px;
+  transition: all ease-in-out 0.15s;
+
+  >span {
+    display: none;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/upArrowWhite.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px auto;
+    transform: rotate(-90deg);
+  }
+}
+
 .no-transition {
   transition: none !important;
 }
+
 .loading {
   opacity: 0.5;
 }
@@ -1319,7 +1388,7 @@ select {
 
 .calendar-button {
   color: #fff;
-  border: 2px solid #256b86;
+  // border: 2px solid #256b86;
   margin: 20px auto;
   display: block;
   padding: 10px;
@@ -1330,9 +1399,16 @@ select {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 2px;
-
+  background-image: url('../images/calendarBg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  transition: all 0.3s;
+  &.open{
+    background-image: url('../images/calendarBgo.png');
+  }
   span {
-    display: inline-block;
+    display: none;
     background-image: url(../images/calendarIcon.png);
     background-repeat: no-repeat;
     background-position: left center;
@@ -1347,7 +1423,9 @@ select {
 section.wizard-section.current-section {
   display: block;
 }
-.button.disabled, .button.disabled:hover {
+
+.button.disabled,
+.button.disabled:hover {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -3138,7 +3216,7 @@ a.sessions-toggle {
 /* part11 */
 
 /* part12 */
-.session-share-container{
+.session-share-container {
   opacity: 0;
   transition: all ease-in-out 0.2s;
   pointer-events: none;
@@ -3147,11 +3225,13 @@ a.sessions-toggle {
   left: 0;
   right: 0;
   top: 0;
-  &.show{
+
+  &.show {
     opacity: 1;
     pointer-events: all;
   }
-  .shade{
+
+  .shade {
     position: fixed;
     left: 0;
     top: 0;
@@ -3159,7 +3239,8 @@ a.sessions-toggle {
     bottom: 0;
     background-color: rgba(2, 13, 17, 0.5);
   }
-  .share-dialogue{
+
+  .share-dialogue {
     position: relative;
     display: block;
     margin: auto;
@@ -3168,15 +3249,17 @@ a.sessions-toggle {
     background-color: #0a242c;
     max-width: 800px;
     padding: 30px;
-    box-shadow: rgba(0,0,0,0.5) 0 5px 50px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 50px;
   }
-  input{
+
+  input {
     border: 1px solid rgba(37, 107, 134, 0.5);
     background-color: rgba(0, 0, 0, 0.5);
     width: calc(100% - 120px);
     padding: 12px;
   }
-  .copy-button{
+
+  .copy-button {
     position: absolute;
     right: 30px;
     top: 2px;
@@ -3184,7 +3267,251 @@ a.sessions-toggle {
     margin: 30px 0;
   }
 }
+
 /* part12 */
+
+/* part13 */
+.personal-info-section {}
+
+.logged-in-account {
+  border: 2px solid #256b86;
+  background-color: rgba(65, 192, 240, 0.05);
+  padding: 30px;
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 30px;
+
+  .logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/closeMenuIcon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+    transition: all ease-in-out 0.2s;
+
+    >span {
+      display: none;
+    }
+  }
+}
+
+.discount-code-container {
+  position: relative;
+
+  .discount-success {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    width: 50px;
+    background-image: url(../images/discountTickCircle.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+  }
+}
+
+#MarketingOptInContainer {
+  position: relative;
+}
+
+span.checkbox {
+  display: inline-block;
+  border: 1px solid rgba(65, 192, 240, 0.2);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all ease-in-out 0.15s;
+  cursor: pointer;
+
+  &:after {
+    opacity: 0;
+    content: '';
+    background-color: rgba(65, 192, 240, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    transition: all ease-in-out 0.15s;
+    transform: scale(0.5);
+    background-image: url(../images/tick.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+  }
+}
+
+span#MarketingOptIn {
+  position: absolute;
+  left: 0;
+  left: auto;
+  z-index: 1;
+  border: 1px solid #38bcee;
+
+}
+
+#MarketingOptInContainer label {
+  line-height: 30px;
+  padding-left: 45px;
+}
+
+span.checkbox.checked:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.booking-summary {
+  border: 2px solid #256b86;
+  margin: 30px 0;
+
+  .hero {
+    background-color: rgba(37, 107, 134, 0.3);
+    background-repeat: no-repeat;
+    background-position: center 25%;
+    background-size: cover;
+    display: block;
+    height: 300px;
+    border-bottom: 1px solid rgba(37, 107, 134, 0.5);
+  }
+
+  .details {
+    font-size: 14px;
+    color: #fff;
+    padding: 20px;
+    background-color: rgba(65, 192, 240, 0.05);
+    position: relative;
+
+    >div {
+      margin-top: 15px;
+    }
+
+    >div:first-child {
+      margin: 0;
+    }
+
+    strong {
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+
+}
+
+.button.edit-summary {
+  margin: 0;
+  margin-top: 30px;
+  padding: 15px;
+  display: block;
+  border: 2px solid #256b86;
+  text-align: center;
+}
+
+.cost-summary {
+  color: #fff;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.3s;
+
+  .line-item {
+    border-bottom: 1px solid rgba(65, 192, 240, 0.2);
+    padding: 10px 0;
+
+    &:after {
+      clear: both;
+      display: table;
+      content: '';
+    }
+
+    .price {
+      float: right;
+      text-align: right;
+    }
+  }
+
+  .line-item:last-child {
+    border-bottom: none;
+  }
+  .line-item.total .price{
+    font-size: 28px;
+  }
+}
+
+.booking-small-print {
+  margin: 30px 0;
+  border: 2px solid #256b86;
+  background-color: rgba(65, 192, 240, 0.05);
+  padding: 20px;
+  display: none;
+
+  strong {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  ul,
+  ol {
+    margin-left: 20px;
+  }
+
+  li {
+    margin: 10px 0;
+    font-size: 16px;
+    list-style-type: disc;
+  }
+}
+.term-section{
+  text-align: center;
+  margin: 30px 0;
+  .agree-to-terms{
+    display: inline-block;
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+  }
+  .checkbox{
+    position: absolute;
+  }
+}
+#AgreeToTerms .checkbox{
+  border: 1px solid #38bcee;
+}
+.wizard-footer.timer .time-remaining-label{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.wizard-footer.timer{
+  transition: all ease-in-out 0.3s;
+  transform: translateY(100%);
+}
+.wizard-footer.timer.show{
+  transform: translateY(0);
+}
+.wizard-footer.timer .count-down-timer{
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 24px auto;
+  padding: 3px 0;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 500;
+  width: 100px;
+  overflow: visible;
+  text-align: left;
+}
+/* part13 */
 
 @media (min-width: 600px) {
   .game-detail-stats>div {
@@ -3194,6 +3521,73 @@ a.sessions-toggle {
 
 
 @media (min-width: 1025px) {
+
+  /* part13 */
+  .personal-info-section {
+    .column-container {
+      margin: 0 -20px;
+      &:after{
+        clear: both;
+        content: '';
+        display: table;
+      }
+    }
+
+    .column {
+      float: left;
+      width: calc(50% - 40px);
+      margin: 0 20px;
+    }
+
+    aside.credit-notice {
+      border-top: 1px solid rgba(65, 192, 240, 0.2);
+
+      p {
+        padding: 10px 0;
+        text-align: center;
+
+        small {
+          font-size: 12pt;
+          color: #969696;
+        }
+      }
+    }
+  }
+
+  label {
+    position: relative;
+  }
+
+  .booking-summary {
+    position: relative;
+
+    .hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      border-right: 1px solid rgba(37, 107, 134, 0.5);
+    }
+
+    .details {
+      margin-left: 50%;
+      padding: 30px;
+      text-transform: uppercase;
+      font-size: 18px;
+
+      strong {
+        font-size: 14px;
+      }
+    }
+  }
+  a.process-button{
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  /* part13 */
   .collapsed .button.sessions-toggle:after {
     transform: rotate(0deg);
   }
@@ -3576,8 +3970,9 @@ a.sessions-toggle {
     right: 30px;
     padding: 10px 15px;
     height: 42px;
-    background-image: none;
-
+    width: 162px;
+    // background-image: none;
+ 
     &:hover {
       background-color: rgba(65, 192, 240, 0.2);
     }
@@ -3913,7 +4308,8 @@ a.sessions-toggle {
             }
           }
         }
-        &.active{
+
+        &.active {
           background-color: rgba(65, 192, 240, 0.2);
         }
       }
@@ -4358,6 +4754,23 @@ a.sessions-toggle {
     font-size: 16px;
   }
 }
+@keyframes spin {
+  0% {
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+
+  100% {
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+}
 
 
 @keyframes diamond-spin {
@@ -4445,7 +4858,7 @@ a.sessions-toggle {
   width: 30px;
   height: 40px;
   background-size: contain;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: all ease-in-out 0.2s;
   position: absolute;
   top: 30px;
@@ -4453,6 +4866,9 @@ a.sessions-toggle {
   width: 25px;
   height: 25px;
 
+  &:hover{
+    opacity: 1;
+  }
   >span {
     display: none;
   }

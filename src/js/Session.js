@@ -80,9 +80,11 @@ WizSession = (function () {
       $('#ShareBookingDialogue').toggleClass('show');
     });
 
-    window.addEventListener('hashchange', function () {
-      self.GotoStep(location.hash.substr(1));
-    });
+    // window.addEventListener('hashchange', function () {
+    //   self.GotoStep(location.hash.substr(1));
+    // });
+
+
   }
 
   function wireEvents() {
@@ -135,11 +137,13 @@ WizSession = (function () {
 
     $(document).on('click', function (e) {
       if (!($(e.target).closest('.calendar-popup').length == 1) && !$(e.target).closest('.calendar-button').hasClass('calendar-button')) {
+        $('#SessionCalendarButton').removeClass("open");
         calendarSelection.$outerDom.find('.calendar-popup').removeClass('show');
       }
     });
 
     $('#SessionCalendarButton').on('click', function () {
+      $(this).toggleClass("open");
       calendarSelection.$outerDom.find('.calendar-popup').toggleClass('show');
     });
 
@@ -233,8 +237,8 @@ WizSession = (function () {
             $('#NotLongerAvailable').addClass('show');
             updatePackages(DateManager.Format(WizardData.config.selected.date, 'yyyyMMdd'));
           } else {
-            WizardData.config.pendingBookingId = data.BookingId;
-            WizardData.config.expirationMinutes = data.ExpirationMinutes;
+            WizardData.config.pendingBookingId = data.BookingId; // 订单编号
+            WizardData.config.expirationMinutes = data.ExpirationMinutes; //过期时间
             WizInformation.start();
           }
           ZLCommon.ShowLoader(false);
@@ -460,6 +464,8 @@ WizSession = (function () {
       }
     }).fail(function () {
       console.log('Failed to retrieved availability data.');
+      $('#IntegratedPackageSessionSection').removeClass('loading');
+      ZLCommon.ShowLoader(false);
     }).always(function () {
       if (callback) {
         callback();

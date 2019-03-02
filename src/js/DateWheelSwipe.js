@@ -245,4 +245,5 @@ function DateWheelSwipe(id, options) {
 
   self.init();
   return self;
+  
 }

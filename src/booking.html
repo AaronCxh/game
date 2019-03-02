@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" href="./css/DatePicker.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/video.css">
   <style>
     body{
       background-position: top center;
@@ -25,7 +26,7 @@
   </style>
 </head>
 
-<body style="background-image: url(./images/bookWizardBackground.jpg);">
+<body style="background-image: url(./images/bookbackground.jpg);">
   <a class="close" id="CloseBookingWizard" href="/"><span>Close</span></a>
   <section id="ChooseLocation" class="wizard-section choose-location-secton hero-section" data-step="">
     <header>
@@ -60,7 +61,7 @@
     </div>
   </section>
 
-  <section id="ChooseSession" class="wizard-section choose-session-section current-section hero-section" data-step="">
+  <section id="ChooseSession" class="wizard-section choose-session-section  hero-section" data-step="">
     <header>
       <strong>Make a Booking</strong>
       <h2>Choose A Session</h2>
@@ -577,6 +578,148 @@
   </section>
 
 
+  <section id="PersonalInfo" class="wizard-section personal-info-section hero-section" data-step="">
+    <header>
+      <a class="back-button" id="InfoBackButton"><span>Back</span></a>
+      <strong>Make a Booking</strong>
+      <h2>Personal Information</h2>
+    </header>
+    <div class="column-container">
+      <div class="column">
+        <div id="LoggedInAccountContainer" class="logged-in-account" style="display: none;">
+          <p>Logged into account:</p><strong id="LoggedInAccountEmail"></strong>
+          <a id="Logout" class="logout"><span>Log Out</span></a>
+        </div>
+
+        <div id="EmailAddressContainer">
+          <label for="EmailAddress">Email Address<span class="required">*</span></label>
+          <div id="EmailSpinner" class="input-spinner-container">
+            <input type="email" id="EmailAddress" data-clean="true">
+            <span class="spinner"></span>
+          </div>
+          <div class="error-message" data-for="EmailAddress" data-type="required" style="display: none;">Please provide
+            your email address</div>
+          <div class="error-message" data-for="EmailAddress" data-type="email" style="display: none;">Invalid email
+            address</div>
+        </div>
+
+        <div id="CreatePasswordContainer" style="display: none;">
+          <label for="CreatePassword">Password<span class="required">*</span></label>
+          <input type="password" id="CreatePassword" value="" data-clean="true">
+          <div class="error-message" data-for="CreatePassword" data-type="required" style="display: none;">Please
+            provide your password</div>
+          <div class="error-message" data-for="CreatePassword" data-type="password" style="display: none;">Password
+            must contain at least six characters.</div>
+        </div>
+
+        <div id="NameSection" style="display: none;">
+          <label for="Name">Name<span class="required">*</span></label>
+          <input type="text" id="Name" data-clean="true">
+          <div class="error-message" data-for="Name" data-type="required" style="display: none;">Please provide your
+            name</div>
+        </div>
+
+        <div id="PhoneNumberSection" style="display: none;">
+          <label for="PhoneNumber">Phone Number<span class="required">*</span></label>
+          <select class="phone-selector" id="CountryCode">
+            <option value="" data-country="" data-callcode="" selected="" hidden=""></option>
+            <option value="AF" data-country="Afghanistan" data-callcode="+93">Afghanistan +93</option>
+
+          </select>
+          <input type="text" id="PhoneNumber" data-clean="true">
+          <div class="error-message" data-for="PhoneNumber" data-type="required" style="display: none;">Please provide
+            your phone number</div>
+          <div class="error-message" data-for="PhoneNumber" data-type="phone" style="display: none;">Invalid phone
+            number</div>
+        </div>
+
+        <div>
+          <label for="DiscountCode">Promotion Code / Gift Voucher</label>
+          <div class="discount-code-container" id="DiscountCodeContainer">
+            <input type="text" id="DiscountCode">
+            <span class="discount-success"></span>
+          </div>
+          <div class="error-message discount-error" data-disacount-err="NotFound" style="display: none;">Code not found</div>
+          <div class="error-message discount-error" data-disacount-err="Inactive" style="display: none;">Code is not
+            active</div>
+          <div class="error-message discount-error" data-disacount-err="Used" style="display: none;">Code has already
+            been used</div>
+          <div class="error-message discount-error" data-disacount-err="NotOpenYet" style="display: none;">Code is not
+            available yet</div>
+          <div class="error-message discount-error" data-disacount-err="Expired" style="display: none;">Code has
+            expired</div>
+          <div class="error-message discount-error" data-disacount-err="FailedSlotRequirement" style="display: none;">Code
+            requires more players</div>
+          <div class="error-message discount-error" data-disacount-err="InvalidClient" style="display: none;">Code not
+            valid for this client</div>
+          <div class="error-message discount-error" data-disacount-err="InvalidSchedule" style="display: none;">Code
+            not available on selected date</div>
+        </div>
+
+        <div id="MarketingOptInContainer">
+          <span id="MarketingOptIn" class="checkbox"></span><label for="MarketingOptIn">I want to receive news and
+            special offers by email</label>
+        </div>
+
+      </div>
+      <div class="column">
+        <div class="booking-summary" id="BookingSummary">
+          <div class="hero" id="SummaryHero" style="background-image: url(&quot;https://zerolatencyvr.blob.core.windows.net/packages/935-1.png&quot;);"></div>
+          <div class="details">
+            <div>
+              <strong>Location</strong>
+              <span id="SummaryLocation">Melbourne</span>
+            </div>
+            <div>
+              <strong>Booking</strong>
+              <span id="SummaryPackage">4 <span class="multiply">×</span> 2 x Sol Raiders</span>
+            </div>
+            <div>
+              <strong>Session</strong>
+              <span id="SummaryBooking">12 Feb 6:00 PM</span>
+            </div>
+            <a class="button ghost edit-summary" id="EditSessionButton"><span>Change</span></a>
+          </div>
+        </div>
+
+        <div class="cost-summary" id="CostSummary">
+          <div class="line-item"><span class="description" price-item="Price">4 <span class="multiply">×</span> Player<span
+                class="price">$264.00</span></span></div>
+          <div class="line-item total"><span class="description">Total</span><span class="price">$264.00</span></div>
+        </div>
+        <aside class="credit-notice">
+          <p><small>To use Zero Latency credit, you must login to your account.</small></p>
+        </aside>
+      </div>
+    </div>
+
+    <div id="BookingSmallPrint" class="booking-small-print" style="display: block;">
+      <ul>
+        <li>Players must be <strong>13 years</strong> and over to play. Players under 18 years old will need a guardian
+          to co-sign the <a href="/download/waiver.pdf">liability waiver</a>.</li>
+        <li>Players <strong>under the influence</strong> of alcohol or drugs will not be permitted to play.</li>
+        <li><strong>Glasses</strong> cannot be worn in this experience, for optimal fit, we strongly recommend wearing
+          contact lenses. Our headsets have adjustment tabs under each lens so that players without contact lenses can
+          adjust the focus of the headsets to compensate for approximately +1 to -3.8 diopters.</li>
+        <li>For more information, please refer to our <a href="/faq">FAQ page</a></li>
+      </ul>
+    </div>
+
+    <div class="term-section" id="AgreeToTermsSection">
+      <div class="agree-to-terms" id="AgreeToTerms"><span class="checkbox"></span><a data-popup="TermsOfServicePopup"
+          data-content-key="Terms Of Service">I agree to the </a><a data-popup="PrivacyPolicyPopup" data-content-key="Privacy Policy">terms
+          and conditions</a></div>
+      <div class="server-error" id="AgreeToTermRequired" style="display: none">Please agree to the terms and conditions</div>
+    </div>
+    <a class="button ghost process-button" id="ProcessBooking">Confirm</a>
+
+    <div class="wizard-footer timer show" id="ExpirationContainer">
+      <span class="time-remaining-label">Time Remaining: </span><span class="count-down-timer" id="ExpirationTime">18:12</span>
+    </div>
+  </section>
+
+
+
   <div class="full-loader" id="FullLoader">
     <div>
       <span class="loader-symbol"></span>
@@ -600,15 +743,85 @@
   </div>
   <!-- 分享内容 -->
 
+
+  <!-- 账号检查 -->
+  <div class="popup-container" id="LoginOrClearEmailPopup">
+    <div class="popup">
+      <div class="popup-body">
+        <div id="UseAccountSection">
+          <h2>Use Your Account</h2>
+          <p>It looks like you've got an account for <strong id="LoginPopupEmailLabel">568146940@qq.com</strong>,
+            please login to complete your booking.</p>
+        </div>
+        <div id="SkipAccountSection" style="display: none;">
+          <h2>Skip Your Account</h2>
+          <p>It looks like you've got an account for <strong id="LoginPopupEmailLabel">568146940@qq.com</strong>, feel
+            free to login if you have store credit you'd like to use, or skip to checkout now.</p>
+        </div>
+      </div>
+      <div class="popup-button-container">
+        <a class="button" id="LoginWithEmail">Log In</a>
+        <a class="button ghost right" id="UseDifferentEmail">Use different email address</a>
+        <a class="button ghost right" id="SkipLogin" style="display:none">Skip</a>
+      </div>
+    </div>
+  </div>
+  <!-- 账号检查 -->
+
+  <!-- 登录 -->
+  <div class="popup-container" id="LoginPopup">
+    <div class="popup">
+      <div class="popup-body">
+        <h2>Log In</h2>
+
+        <div class="server-error" style="display: none" id="EmptyEmailError">
+          Fill in your email below and we can send you a new password.
+        </div>
+
+        <label for="LoginEmail">Email Address</label>
+        <input type="email" id="LoginEmail" autocomplete="off">
+
+        <label for="LoginPassword">Password</label>
+        <input type="password" id="LoginPassword" autocomplete="off">
+
+        <div class="server-error" style="display:none" id="IncorrectPasswordError">
+          Incorrect email and password
+        </div>
+
+        <a class="forgot-password-link" id="ForgotPassword">Forgot password</a>
+        <div class="password-reset-confirmation" style="display: none" id="PasswordResetConfirmation">
+          We've sent you an email with instructions about how to reset your password.
+        </div>
+      </div>
+      <div class="popup-button-container">
+        <a class="button" id="Login">Log In</a>
+        <a class="button ghost right" id="CancelLogin">Cancel</a>
+      </div>
+    </div>
+  </div>
+  <!-- 登录 -->
+
+
+
+  <!-- 视频播放 -->
+  <div class="popup-container popup-video-container" id="PackageViewPopup">
+    <div class="video-frame">
+      <a class="close-video"><span></span></a>
+      <div class="video"></div>
+    </div>
+  </div>
+  <!-- 视频播放 -->
+
   <script>
     var sessionTimeCode = null;
   </script>
   <script src="./js/jquery-1.11.0.js"></script>
   <script src="./js/utils.js"></script>
+  <script src="./js/Validation.js"></script>
   <script src="./js/DateManager.js"></script>
   <script src="./js/DateWheelSwipe.js"></script>
   <script src="./js/DatePicker.js"></script>
-  
+
   <script>
     var WizardData = {};
 
@@ -663,7 +876,7 @@
       siteConfigUrl: '/booking/site-config',
       processBookingUrl: '/booking/process',
       checkEmailUrl: '/booking/check-email',
-      forgotPasswordUrl: '/forgot-password',
+      forgotPasswordUrl: '/booking/forgot-password',
       reserveBookingUrl: '/booking/reserve',
       loginUrl: '/booking/wiz-login',
       logoutUrl: '/booking/wiz-logout',
@@ -705,6 +918,7 @@
   </script>
 
   <script src="./js/Session.js"></script>
+  <script src="./js/Information.js"></script>
 
   <script>
     WizSession.start();

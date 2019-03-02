@@ -1,1 +1,601 @@
-﻿[{"Date":"20190211","Status":"closed"},{"Date":"20190212","Status":"open"},{"Date":"20190213","Status":"limited"},{"Date":"20190214","Status":"open"},{"Date":"20190215","Status":"open"},{"Date":"20190216","Status":"limited"},{"Date":"20190217","Status":"open"},{"Date":"20190218","Status":"closed"},{"Date":"20190219","Status":"open"},{"Date":"20190220","Status":"open"},{"Date":"20190221","Status":"open"},{"Date":"20190222","Status":"open"},{"Date":"20190223","Status":"limited"},{"Date":"20190224","Status":"open"},{"Date":"20190225","Status":"closed"},{"Date":"20190226","Status":"open"},{"Date":"20190227","Status":"open"},{"Date":"20190228","Status":"open"},{"Date":"20190301","Status":"open"},{"Date":"20190302","Status":"limited"},{"Date":"20190303","Status":"open"},{"Date":"20190304","Status":"closed"},{"Date":"20190305","Status":"open"},{"Date":"20190306","Status":"open"},{"Date":"20190307","Status":"open"},{"Date":"20190308","Status":"open"},{"Date":"20190309","Status":"open"},{"Date":"20190310","Status":"open"},{"Date":"20190311","Status":"open"},{"Date":"20190312","Status":"open"},{"Date":"20190313","Status":"open"},{"Date":"20190314","Status":"open"},{"Date":"20190315","Status":"open"},{"Date":"20190316","Status":"open"},{"Date":"20190317","Status":"open"},{"Date":"20190318","Status":"closed"},{"Date":"20190319","Status":"open"},{"Date":"20190320","Status":"open"},{"Date":"20190321","Status":"open"},{"Date":"20190322","Status":"open"},{"Date":"20190323","Status":"open"},{"Date":"20190324","Status":"open"},{"Date":"20190325","Status":"closed"},{"Date":"20190326","Status":"open"},{"Date":"20190327","Status":"open"},{"Date":"20190328","Status":"open"},{"Date":"20190329","Status":"open"},{"Date":"20190330","Status":"open"},{"Date":"20190331","Status":"open"},{"Date":"20190401","Status":"closed"},{"Date":"20190402","Status":"open"},{"Date":"20190403","Status":"open"},{"Date":"20190404","Status":"open"},{"Date":"20190405","Status":"open"},{"Date":"20190406","Status":"open"},{"Date":"20190407","Status":"open"},{"Date":"20190408","Status":"closed"},{"Date":"20190409","Status":"open"},{"Date":"20190410","Status":"open"},{"Date":"20190411","Status":"open"},{"Date":"20190412","Status":"open"},{"Date":"20190413","Status":"open"},{"Date":"20190414","Status":"open"},{"Date":"20190415","Status":"closed"},{"Date":"20190416","Status":"open"},{"Date":"20190417","Status":"open"},{"Date":"20190418","Status":"open"},{"Date":"20190419","Status":"open"},{"Date":"20190420","Status":"open"},{"Date":"20190421","Status":"open"},{"Date":"20190422","Status":"closed"},{"Date":"20190423","Status":"open"},{"Date":"20190424","Status":"open"},{"Date":"20190425","Status":"open"},{"Date":"20190426","Status":"open"},{"Date":"20190427","Status":"open"},{"Date":"20190428","Status":"open"},{"Date":"20190429","Status":"closed"},{"Date":"20190430","Status":"open"},{"Date":"20190501","Status":"open"},{"Date":"20190502","Status":"open"},{"Date":"20190503","Status":"open"},{"Date":"20190504","Status":"open"},{"Date":"20190505","Status":"open"},{"Date":"20190506","Status":"soon"},{"Date":"20190507","Status":"soon"},{"Date":"20190508","Status":"soon"},{"Date":"20190509","Status":"soon"},{"Date":"20190510","Status":"soon"},{"Date":"20190511","Status":"soon"},{"Date":"20190512","Status":"soon"},{"Date":"20190513","Status":"soon"},{"Date":"20190514","Status":"soon"},{"Date":"20190515","Status":"soon"},{"Date":"20190516","Status":"soon"},{"Date":"20190517","Status":"soon"},{"Date":"20190518","Status":"soon"},{"Date":"20190519","Status":"soon"},{"Date":"20190520","Status":"soon"},{"Date":"20190521","Status":"soon"},{"Date":"20190522","Status":"soon"},{"Date":"20190523","Status":"soon"},{"Date":"20190524","Status":"soon"},{"Date":"20190525","Status":"soon"},{"Date":"20190526","Status":"soon"},{"Date":"20190527","Status":"soon"},{"Date":"20190528","Status":"soon"},{"Date":"20190529","Status":"soon"},{"Date":"20190530","Status":"soon"},{"Date":"20190531","Status":"soon"},{"Date":"20190601","Status":"soon"},{"Date":"20190602","Status":"soon"},{"Date":"20190603","Status":"soon"},{"Date":"20190604","Status":"soon"},{"Date":"20190605","Status":"soon"},{"Date":"20190606","Status":"soon"},{"Date":"20190607","Status":"soon"},{"Date":"20190608","Status":"soon"},{"Date":"20190609","Status":"soon"},{"Date":"20190610","Status":"soon"},{"Date":"20190611","Status":"soon"},{"Date":"20190612","Status":"soon"},{"Date":"20190613","Status":"soon"},{"Date":"20190614","Status":"soon"},{"Date":"20190615","Status":"soon"},{"Date":"20190616","Status":"soon"},{"Date":"20190617","Status":"soon"},{"Date":"20190618","Status":"soon"},{"Date":"20190619","Status":"soon"},{"Date":"20190620","Status":"soon"},{"Date":"20190621","Status":"soon"},{"Date":"20190622","Status":"soon"},{"Date":"20190623","Status":"soon"},{"Date":"20190624","Status":"soon"},{"Date":"20190625","Status":"soon"},{"Date":"20190626","Status":"soon"},{"Date":"20190627","Status":"soon"},{"Date":"20190628","Status":"soon"},{"Date":"20190629","Status":"soon"},{"Date":"20190630","Status":"soon"},{"Date":"20190701","Status":"soon"},{"Date":"20190702","Status":"soon"},{"Date":"20190703","Status":"soon"},{"Date":"20190704","Status":"soon"},{"Date":"20190705","Status":"soon"},{"Date":"20190706","Status":"soon"},{"Date":"20190707","Status":"soon"},{"Date":"20190708","Status":"soon"},{"Date":"20190709","Status":"soon"},{"Date":"20190710","Status":"soon"},{"Date":"20190711","Status":"soon"},{"Date":"20190712","Status":"soon"},{"Date":"20190713","Status":"soon"},{"Date":"20190714","Status":"soon"},{"Date":"20190715","Status":"soon"},{"Date":"20190716","Status":"soon"},{"Date":"20190717","Status":"soon"},{"Date":"20190718","Status":"soon"},{"Date":"20190719","Status":"soon"},{"Date":"20190720","Status":"soon"},{"Date":"20190721","Status":"soon"},{"Date":"20190722","Status":"soon"},{"Date":"20190723","Status":"soon"},{"Date":"20190724","Status":"soon"},{"Date":"20190725","Status":"soon"},{"Date":"20190726","Status":"soon"},{"Date":"20190727","Status":"soon"},{"Date":"20190728","Status":"soon"},{"Date":"20190729","Status":"soon"},{"Date":"20190730","Status":"soon"},{"Date":"20190731","Status":"soon"},{"Date":"20190801","Status":"soon"},{"Date":"20190802","Status":"soon"},{"Date":"20190803","Status":"soon"},{"Date":"20190804","Status":"soon"},{"Date":"20190805","Status":"soon"},{"Date":"20190806","Status":"soon"},{"Date":"20190807","Status":"soon"},{"Date":"20190808","Status":"soon"},{"Date":"20190809","Status":"soon"},{"Date":"20190810","Status":"soon"},{"Date":"20190811","Status":"soon"},{"Date":"20190812","Status":"soon"},{"Date":"20190813","Status":"soon"},{"Date":"20190814","Status":"soon"},{"Date":"20190815","Status":"soon"},{"Date":"20190816","Status":"soon"},{"Date":"20190817","Status":"soon"},{"Date":"20190818","Status":"soon"},{"Date":"20190819","Status":"soon"},{"Date":"20190820","Status":"soon"},{"Date":"20190821","Status":"soon"},{"Date":"20190822","Status":"soon"},{"Date":"20190823","Status":"soon"},{"Date":"20190824","Status":"soon"},{"Date":"20190825","Status":"soon"},{"Date":"20190826","Status":"soon"},{"Date":"20190827","Status":"soon"},{"Date":"20190828","Status":"soon"},{"Date":"20190829","Status":"soon"}]
+﻿[{
+  "Date": "20190211",
+  "Status": "closed"
+}, {
+  "Date": "20190212",
+  "Status": "closed"
+}, {
+  "Date": "20190213",
+  "Status": "limited"
+}, {
+  "Date": "20190214",
+  "Status": "open"
+}, {
+  "Date": "20190215",
+  "Status": "open"
+}, {
+  "Date": "20190216",
+  "Status": "limited"
+}, {
+  "Date": "20190217",
+  "Status": "open"
+}, {
+  "Date": "20190218",
+  "Status": "closed"
+}, {
+  "Date": "20190219",
+  "Status": "open"
+}, {
+  "Date": "20190220",
+  "Status": "open"
+}, {
+  "Date": "20190221",
+  "Status": "open"
+}, {
+  "Date": "20190222",
+  "Status": "open"
+}, {
+  "Date": "20190223",
+  "Status": "limited"
+}, {
+  "Date": "20190224",
+  "Status": "open"
+}, {
+  "Date": "20190225",
+  "Status": "closed"
+}, {
+  "Date": "20190226",
+  "Status": "open"
+}, {
+  "Date": "20190227",
+  "Status": "open"
+}, {
+  "Date": "20190228",
+  "Status": "open"
+}, {
+  "Date": "20190301",
+  "Status": "open"
+}, {
+  "Date": "20190302",
+  "Status": "limited"
+}, {
+  "Date": "20190303",
+  "Status": "open"
+}, {
+  "Date": "20190304",
+  "Status": "closed"
+}, {
+  "Date": "20190305",
+  "Status": "open"
+}, {
+  "Date": "20190306",
+  "Status": "open"
+}, {
+  "Date": "20190307",
+  "Status": "open"
+}, {
+  "Date": "20190308",
+  "Status": "open"
+}, {
+  "Date": "20190309",
+  "Status": "open"
+}, {
+  "Date": "20190310",
+  "Status": "open"
+}, {
+  "Date": "20190311",
+  "Status": "open"
+}, {
+  "Date": "20190312",
+  "Status": "open"
+}, {
+  "Date": "20190313",
+  "Status": "open"
+}, {
+  "Date": "20190314",
+  "Status": "open"
+}, {
+  "Date": "20190315",
+  "Status": "open"
+}, {
+  "Date": "20190316",
+  "Status": "open"
+}, {
+  "Date": "20190317",
+  "Status": "open"
+}, {
+  "Date": "20190318",
+  "Status": "closed"
+}, {
+  "Date": "20190319",
+  "Status": "open"
+}, {
+  "Date": "20190320",
+  "Status": "open"
+}, {
+  "Date": "20190321",
+  "Status": "open"
+}, {
+  "Date": "20190322",
+  "Status": "open"
+}, {
+  "Date": "20190323",
+  "Status": "open"
+}, {
+  "Date": "20190324",
+  "Status": "open"
+}, {
+  "Date": "20190325",
+  "Status": "closed"
+}, {
+  "Date": "20190326",
+  "Status": "open"
+}, {
+  "Date": "20190327",
+  "Status": "open"
+}, {
+  "Date": "20190328",
+  "Status": "open"
+}, {
+  "Date": "20190329",
+  "Status": "open"
+}, {
+  "Date": "20190330",
+  "Status": "open"
+}, {
+  "Date": "20190331",
+  "Status": "open"
+}, {
+  "Date": "20190401",
+  "Status": "closed"
+}, {
+  "Date": "20190402",
+  "Status": "open"
+}, {
+  "Date": "20190403",
+  "Status": "open"
+}, {
+  "Date": "20190404",
+  "Status": "open"
+}, {
+  "Date": "20190405",
+  "Status": "open"
+}, {
+  "Date": "20190406",
+  "Status": "open"
+}, {
+  "Date": "20190407",
+  "Status": "open"
+}, {
+  "Date": "20190408",
+  "Status": "closed"
+}, {
+  "Date": "20190409",
+  "Status": "open"
+}, {
+  "Date": "20190410",
+  "Status": "open"
+}, {
+  "Date": "20190411",
+  "Status": "open"
+}, {
+  "Date": "20190412",
+  "Status": "open"
+}, {
+  "Date": "20190413",
+  "Status": "open"
+}, {
+  "Date": "20190414",
+  "Status": "open"
+}, {
+  "Date": "20190415",
+  "Status": "closed"
+}, {
+  "Date": "20190416",
+  "Status": "open"
+}, {
+  "Date": "20190417",
+  "Status": "open"
+}, {
+  "Date": "20190418",
+  "Status": "open"
+}, {
+  "Date": "20190419",
+  "Status": "open"
+}, {
+  "Date": "20190420",
+  "Status": "open"
+}, {
+  "Date": "20190421",
+  "Status": "open"
+}, {
+  "Date": "20190422",
+  "Status": "closed"
+}, {
+  "Date": "20190423",
+  "Status": "open"
+}, {
+  "Date": "20190424",
+  "Status": "open"
+}, {
+  "Date": "20190425",
+  "Status": "open"
+}, {
+  "Date": "20190426",
+  "Status": "open"
+}, {
+  "Date": "20190427",
+  "Status": "open"
+}, {
+  "Date": "20190428",
+  "Status": "open"
+}, {
+  "Date": "20190429",
+  "Status": "closed"
+}, {
+  "Date": "20190430",
+  "Status": "open"
+}, {
+  "Date": "20190501",
+  "Status": "open"
+}, {
+  "Date": "20190502",
+  "Status": "open"
+}, {
+  "Date": "20190503",
+  "Status": "open"
+}, {
+  "Date": "20190504",
+  "Status": "open"
+}, {
+  "Date": "20190505",
+  "Status": "open"
+}, {
+  "Date": "20190506",
+  "Status": "soon"
+}, {
+  "Date": "20190507",
+  "Status": "soon"
+}, {
+  "Date": "20190508",
+  "Status": "soon"
+}, {
+  "Date": "20190509",
+  "Status": "soon"
+}, {
+  "Date": "20190510",
+  "Status": "soon"
+}, {
+  "Date": "20190511",
+  "Status": "soon"
+}, {
+  "Date": "20190512",
+  "Status": "soon"
+}, {
+  "Date": "20190513",
+  "Status": "soon"
+}, {
+  "Date": "20190514",
+  "Status": "soon"
+}, {
+  "Date": "20190515",
+  "Status": "soon"
+}, {
+  "Date": "20190516",
+  "Status": "soon"
+}, {
+  "Date": "20190517",
+  "Status": "soon"
+}, {
+  "Date": "20190518",
+  "Status": "soon"
+}, {
+  "Date": "20190519",
+  "Status": "soon"
+}, {
+  "Date": "20190520",
+  "Status": "soon"
+}, {
+  "Date": "20190521",
+  "Status": "soon"
+}, {
+  "Date": "20190522",
+  "Status": "soon"
+}, {
+  "Date": "20190523",
+  "Status": "soon"
+}, {
+  "Date": "20190524",
+  "Status": "soon"
+}, {
+  "Date": "20190525",
+  "Status": "soon"
+}, {
+  "Date": "20190526",
+  "Status": "soon"
+}, {
+  "Date": "20190527",
+  "Status": "soon"
+}, {
+  "Date": "20190528",
+  "Status": "soon"
+}, {
+  "Date": "20190529",
+  "Status": "soon"
+}, {
+  "Date": "20190530",
+  "Status": "soon"
+}, {
+  "Date": "20190531",
+  "Status": "soon"
+}, {
+  "Date": "20190601",
+  "Status": "soon"
+}, {
+  "Date": "20190602",
+  "Status": "soon"
+}, {
+  "Date": "20190603",
+  "Status": "soon"
+}, {
+  "Date": "20190604",
+  "Status": "soon"
+}, {
+  "Date": "20190605",
+  "Status": "soon"
+}, {
+  "Date": "20190606",
+  "Status": "soon"
+}, {
+  "Date": "20190607",
+  "Status": "soon"
+}, {
+  "Date": "20190608",
+  "Status": "soon"
+}, {
+  "Date": "20190609",
+  "Status": "soon"
+}, {
+  "Date": "20190610",
+  "Status": "soon"
+}, {
+  "Date": "20190611",
+  "Status": "soon"
+}, {
+  "Date": "20190612",
+  "Status": "soon"
+}, {
+  "Date": "20190613",
+  "Status": "soon"
+}, {
+  "Date": "20190614",
+  "Status": "soon"
+}, {
+  "Date": "20190615",
+  "Status": "soon"
+}, {
+  "Date": "20190616",
+  "Status": "soon"
+}, {
+  "Date": "20190617",
+  "Status": "soon"
+}, {
+  "Date": "20190618",
+  "Status": "soon"
+}, {
+  "Date": "20190619",
+  "Status": "soon"
+}, {
+  "Date": "20190620",
+  "Status": "soon"
+}, {
+  "Date": "20190621",
+  "Status": "soon"
+}, {
+  "Date": "20190622",
+  "Status": "soon"
+}, {
+  "Date": "20190623",
+  "Status": "soon"
+}, {
+  "Date": "20190624",
+  "Status": "soon"
+}, {
+  "Date": "20190625",
+  "Status": "soon"
+}, {
+  "Date": "20190626",
+  "Status": "soon"
+}, {
+  "Date": "20190627",
+  "Status": "soon"
+}, {
+  "Date": "20190628",
+  "Status": "soon"
+}, {
+  "Date": "20190629",
+  "Status": "soon"
+}, {
+  "Date": "20190630",
+  "Status": "soon"
+}, {
+  "Date": "20190701",
+  "Status": "soon"
+}, {
+  "Date": "20190702",
+  "Status": "soon"
+}, {
+  "Date": "20190703",
+  "Status": "soon"
+}, {
+  "Date": "20190704",
+  "Status": "soon"
+}, {
+  "Date": "20190705",
+  "Status": "soon"
+}, {
+  "Date": "20190706",
+  "Status": "soon"
+}, {
+  "Date": "20190707",
+  "Status": "soon"
+}, {
+  "Date": "20190708",
+  "Status": "soon"
+}, {
+  "Date": "20190709",
+  "Status": "soon"
+}, {
+  "Date": "20190710",
+  "Status": "soon"
+}, {
+  "Date": "20190711",
+  "Status": "soon"
+}, {
+  "Date": "20190712",
+  "Status": "soon"
+}, {
+  "Date": "20190713",
+  "Status": "soon"
+}, {
+  "Date": "20190714",
+  "Status": "soon"
+}, {
+  "Date": "20190715",
+  "Status": "soon"
+}, {
+  "Date": "20190716",
+  "Status": "soon"
+}, {
+  "Date": "20190717",
+  "Status": "soon"
+}, {
+  "Date": "20190718",
+  "Status": "soon"
+}, {
+  "Date": "20190719",
+  "Status": "soon"
+}, {
+  "Date": "20190720",
+  "Status": "soon"
+}, {
+  "Date": "20190721",
+  "Status": "soon"
+}, {
+  "Date": "20190722",
+  "Status": "soon"
+}, {
+  "Date": "20190723",
+  "Status": "soon"
+}, {
+  "Date": "20190724",
+  "Status": "soon"
+}, {
+  "Date": "20190725",
+  "Status": "soon"
+}, {
+  "Date": "20190726",
+  "Status": "soon"
+}, {
+  "Date": "20190727",
+  "Status": "soon"
+}, {
+  "Date": "20190728",
+  "Status": "soon"
+}, {
+  "Date": "20190729",
+  "Status": "soon"
+}, {
+  "Date": "20190730",
+  "Status": "soon"
+}, {
+  "Date": "20190731",
+  "Status": "soon"
+}, {
+  "Date": "20190801",
+  "Status": "soon"
+}, {
+  "Date": "20190802",
+  "Status": "soon"
+}, {
+  "Date": "20190803",
+  "Status": "soon"
+}, {
+  "Date": "20190804",
+  "Status": "soon"
+}, {
+  "Date": "20190805",
+  "Status": "soon"
+}, {
+  "Date": "20190806",
+  "Status": "soon"
+}, {
+  "Date": "20190807",
+  "Status": "soon"
+}, {
+  "Date": "20190808",
+  "Status": "soon"
+}, {
+  "Date": "20190809",
+  "Status": "soon"
+}, {
+  "Date": "20190810",
+  "Status": "soon"
+}, {
+  "Date": "20190811",
+  "Status": "soon"
+}, {
+  "Date": "20190812",
+  "Status": "soon"
+}, {
+  "Date": "20190813",
+  "Status": "soon"
+}, {
+  "Date": "20190814",
+  "Status": "soon"
+}, {
+  "Date": "20190815",
+  "Status": "soon"
+}, {
+  "Date": "20190816",
+  "Status": "soon"
+}, {
+  "Date": "20190817",
+  "Status": "soon"
+}, {
+  "Date": "20190818",
+  "Status": "soon"
+}, {
+  "Date": "20190819",
+  "Status": "soon"
+}, {
+  "Date": "20190820",
+  "Status": "soon"
+}, {
+  "Date": "20190821",
+  "Status": "soon"
+}, {
+  "Date": "20190822",
+  "Status": "soon"
+}, {
+  "Date": "20190823",
+  "Status": "soon"
+}, {
+  "Date": "20190824",
+  "Status": "soon"
+}, {
+  "Date": "20190825",
+  "Status": "soon"
+}, {
+  "Date": "20190826",
+  "Status": "soon"
+}, {
+  "Date": "20190827",
+  "Status": "soon"
+}, {
+  "Date": "20190828",
+  "Status": "soon"
+}, {
+  "Date": "20190829",
+  "Status": "soon"
+}]

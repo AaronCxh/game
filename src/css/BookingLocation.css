@@ -1,0 +1,192 @@
+﻿body > main {
+  margin: 0;
+}
+
+section {
+  margin: 0;
+  background-image: url(../images/locationsBackground-dot.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  min-height: 100vh;
+  padding: 100px 0;
+  text-align: center;
+  display: flex;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+section:after {
+  content: '';
+  position: absolute;
+  background-color: rgba(2, 13, 17, 0.6);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+section content {
+  align-items: center;
+  padding-bottom: 30px;
+  z-index: 1;
+  display: block;
+  margin-top: 0;
+  width: 110vh;
+}
+
+#CountrySelect {
+  display: inline;
+  width: 50%;
+  margin-top: 20px;
+  font-size: 2.5vh;
+  border: #999D9E 2px solid;
+}
+
+.locations {
+  list-style-type: none;
+  margin: 30px 0;
+}
+
+.locations:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.other-location {
+  font-size: 24px;
+}
+
+.locations li {
+  padding: 0;
+  border: 2px solid rgba(90, 206, 250, 1);
+  margin: 20px 0;
+  text-align: center;
+  min-height: 140px;
+}
+
+.locations li a {
+  display: block;
+  padding: 15px;
+  border: none !important;
+
+}
+.locations li a:hover{
+  background: none;
+
+}
+
+.locations li a strong {
+  display: block;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 30px;
+}
+
+.locations li .address {
+  display: block;
+  font-size: 16px;
+}
+
+.gift-voucher-link {
+  display: block;
+  border: 2px solid rgba(90, 206, 250, 0.3);
+  background-color: rgba(90, 206, 250, 0.1);
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 620px;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+  opacity: 0.0;
+}
+
+.gift-voucher-link:hover {
+  background-color: rgba(90, 206, 250, 0.2);
+}
+
+.gift-voucher-link:after {
+  display: block;
+  content: '';
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.gift-voucher-link h2 {
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.gift-voucher-link p {
+  font-size: 18px;
+}
+
+.group-booking-link {
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  text-align: center;
+  background-color: #0c2127;
+  z-index: 2;
+  box-shadow: #000000 0 0 150px;
+}
+
+.book-tickets {
+  display: none;
+}
+
+.country-selector {
+  display: block;
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  section {
+      padding-top: 150px;
+  }
+
+  .locations li {
+      float: left;
+      width: calc(50% - 30px);
+      margin: 15px;
+      padding: 0 10px;
+  }
+
+  .locations li a {
+      padding: 20px;
+  }
+
+  .locations li:hover {
+      background-color: rgba(90, 206, 250, 0.1);
+  }
+
+  .gift-voucher-link:after {
+      background-image: url(../images/giftVoucherBow.png);
+  }
+}
+
+@media (max-width:750px) {
+  .gift-voucher-link h2 {
+      font-size: 22px;
+  }
+
+  .group-booking-link {
+      position: relative;
+      left: unset;
+      right: unset;
+  }
+
+  #CountrySelect {
+      width: 100%;
+  }
+}
